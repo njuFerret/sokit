@@ -5,7 +5,7 @@
 TEMPLATE = app
 TARGET = sokit
 
-QT += gui network
+QT += gui widgets network
 CONFIG += debug_and_release build_all thread
 DEFINES += QT_NETWORK_LIB
 INCLUDEPATH += . ./../../../tmp ./../../../src/sokit
@@ -14,20 +14,20 @@ UI_DIR += ./../../../tmp
 RCC_DIR += ./../../../tmp
 
 win32 {
-    DEFINES += QT_LARGEFILE_SUPPORT
+#    DEFINES += QT_LARGEFILE_SUPPORT
     CONFIG += windows qt_static
 
-    QMAKE_CFLAGS_MT =-MT
-    QMAKE_CFLAGS_MT_DBG =-MTd
-    QMAKE_CFLAGS_MT_DLL =-MD
-    QMAKE_CFLAGS_MT_DLLDBG =-MDd
+#    QMAKE_CFLAGS_MT =-MT
+#    QMAKE_CFLAGS_MT_DBG =-MTd
+#    QMAKE_CFLAGS_MT_DLL =-MD
+#    QMAKE_CFLAGS_MT_DLLDBG =-MDd
 }
 
 CONFIG(debug, debug|release) {
-    DESTDIR = ../../../bin/debug
-    MOC_DIR += ./../../../tmp/debug
-    OBJECTS_DIR += ./../../../tmp/debug
-    INCLUDEPATH += ./../../../tmp/debug
+    DESTDIR = $$PWD/../../../bin/debug
+    MOC_DIR += $$PWD/../../../tmp/debug
+    OBJECTS_DIR += $$PWD/../../../tmp/debug
+    INCLUDEPATH += $$PWD/../../../tmp/debug
 
     QMAKE_CFLAGS_DEBUG = $$unique(QMAKE_CFLAGS_DEBUG)
     QMAKE_CXXFLAGS_DEBUG = $$unique(QMAKE_CFLAGS_DEBUG)
@@ -44,10 +44,10 @@ CONFIG(debug, debug|release) {
         QMAKE_CXXFLAGS_DEBUG += $$QMAKE_CFLAGS_MT_DLLDBG
     }
 } else {
-    DESTDIR = ../../../bin/release
-    MOC_DIR += ./../../../tmp/release
-    OBJECTS_DIR += ./../../../tmp/release
-    INCLUDEPATH += ./../../../tmp/release
+    DESTDIR = $$PWD/../../../bin/release
+    MOC_DIR += $$PWD/../../../tmp/release
+    OBJECTS_DIR += $$PWD/../../../tmp/release
+    INCLUDEPATH += $$PWD/../../../tmp/release
 
     QMAKE_CFLAGS_RELEASE = $$unique(QMAKE_CFLAGS_RELEASE)
     QMAKE_CXXFLAGS_RELEASE = $$unique(QMAKE_CXXFLAGS_RELEASE)
@@ -99,15 +99,15 @@ FORMS += ../../../src/sokit/clientform.ui \
 TRANSLATIONS += ../../../src/sokit/sokit.ts
 RESOURCES += ../../../src/sokit/icons.qrc
 
-QMAKE_PRE_LINK = lupdate ./sokit.pro
-QMAKE_POST_LINK = lrelease ../../../src/sokit/sokit.ts -qm $$DESTDIR/sokit.lan
+QMAKE_PRE_LINK = lupdate $$PWD/sokit.pro
+QMAKE_POST_LINK = lrelease $$PWD/../../../src/sokit/sokit.ts -qm $$DESTDIR/sokit.lan
 
 win32 {
     RC_FILE = ../../../src/sokit/sokit.rc
     LIBS += -lWs2_32 -lWinmm -lImm32
-    QMAKE_LFLAGS_DEBUG += /PDB:"$$DESTDIR/sokit.pdb"
-    QMAKE_CFLAGS_DEBUG += /Fd"$$OBJECTS_DIR/sokit.pdb"
-    QMAKE_CXXFLAGS_DEBUG += /Fd"$$OBJECTS_DIR/sokit.pdb"
+#    QMAKE_LFLAGS_DEBUG += /PDB:"$$DESTDIR/sokit.pdb"
+#    QMAKE_CFLAGS_DEBUG += /Fd"$$OBJECTS_DIR/sokit.pdb"
+#    QMAKE_CXXFLAGS_DEBUG += /Fd"$$OBJECTS_DIR/sokit.pdb"
 
    CONFIG(qt_static) {
         exists( $(QTDIR)/lib/static ) {
