@@ -226,17 +226,17 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Logger</name>
     <message>
-        <location filename="logger.cpp" line="49"/>
+        <location filename="logger.cpp" line="41"/>
         <source>Copy</source>
         <translation type="unfinished">复制</translation>
     </message>
     <message>
-        <location filename="logger.cpp" line="53"/>
+        <location filename="logger.cpp" line="45"/>
         <source>Clear</source>
         <translation type="unfinished">清除</translation>
     </message>
     <message>
-        <location filename="logger.cpp" line="57"/>
+        <location filename="logger.cpp" line="49"/>
         <source>Select All</source>
         <translation type="unfinished">全选</translation>
     </message>
