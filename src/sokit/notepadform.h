@@ -3,30 +3,27 @@
 
 #include <QPlainTextEdit>
 
-class NotepadForm : public QWidget
-{
-	Q_OBJECT
+class NotepadForm : public QWidget {
+  Q_OBJECT
 
 public:
-    NotepadForm(QWidget* p=0, Qt::WindowFlags f=0);
-	virtual ~NotepadForm();
+  // NOTE: Fix deprecation warnings caused by QFlags
+  // NotepadForm(QWidget *parent = 0, Qt::WindowFlags flags = 0);
+  NotepadForm(QWidget *parent = 0, Qt::WindowFlags flags = QFlag(0));
+  virtual ~NotepadForm();
 
 public:
-	bool init();
+  bool init();
 
 private slots:
-	void jumptab();
+  void jumptab();
 
 private:
-	void setupUi();
-	void uninit();
+  void setupUi();
+  void uninit();
 
 private:
-    QPlainTextEdit* m_board;
+  QPlainTextEdit *m_board;
 };
 
-#endif // __NOTEPADFORM_H__
-
-
-
-
+#endif        // __NOTEPADFORM_H__

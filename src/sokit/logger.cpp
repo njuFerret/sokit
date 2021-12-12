@@ -63,13 +63,15 @@ void Logger::init(QTreeWidget *o, QCheckBox *w, QPlainTextEdit *d) {
     m_textOut->setPalette(pal);
 
     m_treeOut->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(m_treeOut, SIGNAL(customContextMenuRequested(const QPoint &)), this,
-            SLOT(ctxmenu(const QPoint &)));
-    connect(m_treeOut, SIGNAL(itemSelectionChanged()), this, SLOT(syncOutput()));
+    // NOTE: fix Signal & Slot: Signature is not normalized
+    //    connect(m_treeOut, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(ctxmenu(const QPoint &)));
+    connect(m_treeOut, &QTreeWidget::customContextMenuRequested, this, QOverload<const QPoint &>::of(&Logger::ctxmenu));
+    connect(m_treeOut, &QTreeWidget::itemSelectionChanged, this, &Logger::syncOutput);
 
     m_textOut->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(m_textOut, SIGNAL(customContextMenuRequested(const QPoint &)), this,
-            SLOT(ctxmenu(const QPoint &)));
+    // NOTE: fix Signal & Slot: Signature is not normalized
+    //    connect(m_textOut, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(ctxmenu(const QPoint &)));
+    connect(m_textOut, &QTreeWidget::customContextMenuRequested, this, QOverload<const QPoint &>::of(&Logger::ctxmenu));
   }
 }
 

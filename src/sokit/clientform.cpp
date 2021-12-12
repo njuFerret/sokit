@@ -11,7 +11,9 @@
 
 #define SET_VAL_LGCLT "log_client"
 
-ClientForm::ClientForm(QWidget *p, Qt::WindowFlags f) : BaseForm(p, f), m_client(0) { m_ui.setupUi(this); }
+ClientForm::ClientForm(QWidget *parent, Qt::WindowFlags flags) : BaseForm(parent, flags), m_client(0) {
+  m_ui.setupUi(this);
+}
 
 ClientForm::~ClientForm() {
   unplug();
@@ -131,12 +133,13 @@ bool ClientForm::plug(bool istcp) {
     if (!m_client) {
       res = false;
     } else {
-      connect(m_client, SIGNAL(unpluged()), this, SLOT(unpluged()));
-      connect(m_client, SIGNAL(message(const QString &)), this, SIGNAL(output(const QString &)));
-      connect(m_client, SIGNAL(dumpbin(const QString &, const char *, quint32)), this,
-              SIGNAL(output(const QString &, const char *, quint32)));
-      connect(m_client, SIGNAL(countRecv(qint32)), this, SLOT(countRecv(qint32)));
-      connect(m_client, SIGNAL(countSend(qint32)), this, SLOT(countSend(qint32)));
+      // NOTE: fix Signal & Slot: Signature is not normalized
+      connect(m_client, &ClientSkt::unpluged, this, &ClientForm::unpluged);
+      connect(m_client, &ClientSkt::message, this, QOverload<const QString &>::of(&ClientForm::output));
+      connect(m_client, &ClientSkt::dumpbin, this,
+              QOverload<const QString &, const char *, quint32>::of(&ClientForm::output));
+      connect(m_client, &ClientSkt::countRecv, this, &ClientForm::countRecv);
+      connect(m_client, &ClientSkt::countSend, this, &ClientForm::countSend);
 
       skt = m_client;
     }

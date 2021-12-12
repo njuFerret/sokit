@@ -1,26 +1,20 @@
-#include "toolkit.h"
-#include "setting.h"
 #include "helpform.h"
+#include "setting.h"
+#include "toolkit.h"
 
 #include <QShortcut>
 #include <QTextStream>
 
-HelpForm::HelpForm(QWidget* p, Qt::WindowFlags f):QDialog(p, f)
-{
-	m_ui.setupUi(this);
-	init();
+HelpForm::HelpForm(QWidget *parent, Qt::WindowFlags flags) : QDialog(parent, flags) {
+  m_ui.setupUi(this);
+  init();
 }
 
-HelpForm::~HelpForm()
-{
+HelpForm::~HelpForm() {}
+
+void HelpForm::init() {
+  QShortcut *k = new QShortcut(QKeySequence(Qt::Key_F1), this);
+  // NOTE: Fix 老式信号槽连接
+  //  connect(k, SIGNAL(activated()), this, SLOT(close()));
+  connect(k, &QShortcut::activated, this, &HelpForm::close);
 }
-
-void HelpForm::init()
-{
-	QShortcut* k = new QShortcut(QKeySequence(Qt::Key_F1), this);
-	connect(k, SIGNAL(activated()), this, SLOT(close()));
-
-}
-
-
-

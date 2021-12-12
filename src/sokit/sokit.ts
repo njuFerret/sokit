@@ -244,7 +244,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>NotepadForm</name>
     <message>
-        <location filename="notepadform.cpp" line="41"/>
+        <location filename="notepadform.cpp" line="33"/>
         <source>Notepad</source>
         <translation type="unfinished">记事板</translation>
     </message>
@@ -252,37 +252,37 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QLineEdit</name>
     <message>
-        <location filename="main.cpp" line="42"/>
+        <location filename="main.cpp" line="30"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">撤销</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="43"/>
+        <location filename="main.cpp" line="31"/>
         <source>&amp;Redo</source>
         <translation type="unfinished">重做</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="44"/>
+        <location filename="main.cpp" line="32"/>
         <source>Cu&amp;t</source>
         <translation type="unfinished">剪切</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="45"/>
+        <location filename="main.cpp" line="33"/>
         <source>&amp;Copy</source>
         <translation type="unfinished">复制</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="46"/>
+        <location filename="main.cpp" line="34"/>
         <source>&amp;Paste</source>
         <translation type="unfinished">粘贴</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="47"/>
+        <location filename="main.cpp" line="35"/>
         <source>Delete</source>
         <translation type="unfinished">删除</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="48"/>
+        <location filename="main.cpp" line="36"/>
         <source>Select All</source>
         <translation type="unfinished">全选</translation>
     </message>
@@ -290,37 +290,37 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QTextControl</name>
     <message>
-        <location filename="main.cpp" line="50"/>
+        <location filename="main.cpp" line="38"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">撤销</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="51"/>
+        <location filename="main.cpp" line="39"/>
         <source>&amp;Redo</source>
         <translation type="unfinished">重做</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="52"/>
+        <location filename="main.cpp" line="40"/>
         <source>Cu&amp;t</source>
         <translation type="unfinished">剪切</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="53"/>
+        <location filename="main.cpp" line="41"/>
         <source>&amp;Copy</source>
         <translation type="unfinished">复制</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="54"/>
+        <location filename="main.cpp" line="42"/>
         <source>&amp;Paste</source>
         <translation type="unfinished">粘贴</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="55"/>
+        <location filename="main.cpp" line="43"/>
         <source>Delete</source>
         <translation type="unfinished">删除</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="56"/>
+        <location filename="main.cpp" line="44"/>
         <source>Select All</source>
         <translation type="unfinished">全选</translation>
     </message>
@@ -429,12 +429,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Sokit</name>
     <message>
-        <location filename="main.cpp" line="96"/>
+        <location filename="main.cpp" line="80"/>
         <source>font</source>
         <translation type="unfinished">Microsoft YaHei,10;微软雅黑,10;WenQuanYi Micro Hei,11;文泉驿微米黑,11;DejaVu Sans,11;WenQuanYi Zen Hei,10;文泉驿正黑,10;宋体,9;SimSun,9;FangSong,11.5;AR PL UMing CN,10.5;</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="147"/>
+        <location filename="main.cpp" line="125"/>
         <source>sokit -- F1 for help</source>
         <translation type="unfinished">sokit -- F1获取帮助</translation>
     </message>
