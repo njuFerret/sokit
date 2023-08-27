@@ -45,7 +45,6 @@ void Sokit::initDefaultActionsName() {
 }
 
 bool Sokit::initTranslator() {
-  //
   QString file = Setting::get(SET_SEC_CFG, SET_KEY_LANG, SET_VAL_LANG);
 
   QStringList paths;
@@ -75,8 +74,6 @@ void Sokit::initFont() {
   QString size = Setting::get(SET_SEC_CFG, SET_KEY_FTSZ, "").trimmed();
 
   if (family.isEmpty() || fs.filter(family).isEmpty()) {
-    // NOTE: Fix split is deprecated: use Qt::splitBehavior variant
-    // QStringList defs = translate("Sokit", "font").split(";", QString::SkipEmptyParts);
     QStringList defs = translate("Sokit", "font").split(";", Qt::SkipEmptyParts);
     foreach (QString d, defs) {
       family = d.section(',', 0, 0).trimmed();
@@ -96,7 +93,7 @@ void Sokit::initFont() {
 
     if (db.isSmoothlyScalable(family))
       font.setStyleStrategy(
-          (QFont::StyleStrategy)(QFont::PreferAntialias | QFont::PreferOutline | QFont::PreferQuality));
+          static_cast<QFont::StyleStrategy>(QFont::PreferAntialias | QFont::PreferOutline | QFont::PreferQuality));
 
     int nsize = size.toInt();
     if (nsize > 0 && nsize < 20)
@@ -115,25 +112,25 @@ bool Sokit::initUI() {
   initTranslator();
   initFont();
 
-  HelpForm *h = new HelpForm(&m_wnd, Qt::WindowCloseButtonHint);
+  auto h = new HelpForm(&m_wnd, Qt::WindowCloseButtonHint);
 
-  QShortcut *k = new QShortcut(QKeySequence(Qt::Key_F1), &m_wnd);
-  QShortcut *t = new QShortcut(QKeySequence(Qt::Key_F10), &m_wnd);
+  auto k = new QShortcut(QKeySequence(Qt::Key_F1), &m_wnd);
+  auto t = new QShortcut(QKeySequence(Qt::Key_F10), &m_wnd);
   connect(k, SIGNAL(activated()), h, SLOT(exec()));
   connect(t, SIGNAL(activated()), this, SLOT(ontop()));
 
   m_wnd.setWindowTitle(translate("Sokit", "sokit -- F1 for help"));
   m_wnd.setWindowIcon(QIcon(":/sokit.png"));
 
-  QWidget *pnl = new QWidget(&m_wnd);
+  auto pnl = new QWidget(&m_wnd);
   m_wnd.setCentralWidget(pnl);
 
   BaseForm *server = new ServerForm();
   BaseForm *transf = new TransferForm();
   BaseForm *client = new ClientForm();
-  NotepadForm *npd = new NotepadForm();
+  auto npd = new NotepadForm();
 
-  QTabWidget *tab = new QTabWidget(pnl);
+  auto tab = new QTabWidget(pnl);
   tab->addTab(server, server->windowTitle());
   tab->addTab(transf, transf->windowTitle());
   tab->addTab(client, client->windowTitle());

@@ -6,16 +6,20 @@ TEMPLATE = app
 TARGET = sokit
 
 QT += gui widgets network
-CONFIG += debug_and_release build_all thread
+#CONFIG += debug_and_release build_all thread
+CONFIG += release
 DEFINES += QT_NETWORK_LIB
-INCLUDEPATH += . ./../../../tmp ./../../../src/sokit
+INCLUDEPATH += .
+INCLUDEPATH += ./../../../tmp
+INCLUDEPATH += ./../../../src/sokit
 DEPENDPATH += .
 UI_DIR += ./../../../tmp
 RCC_DIR += ./../../../tmp
 
 win32 {
 #    DEFINES += QT_LARGEFILE_SUPPORT
-    CONFIG += windows qt_static
+#    CONFIG += windows qt_static
+    CONFIG += windows
 
 #    QMAKE_CFLAGS_MT =-MT
 #    QMAKE_CFLAGS_MT_DBG =-MTd
@@ -24,6 +28,7 @@ win32 {
 }
 
 CONFIG(debug, debug|release) {
+    message("Config:  Debug")
     DESTDIR = $$PWD/../../../bin/debug
     MOC_DIR += $$PWD/../../../tmp/debug
     OBJECTS_DIR += $$PWD/../../../tmp/debug
@@ -44,10 +49,15 @@ CONFIG(debug, debug|release) {
         QMAKE_CXXFLAGS_DEBUG += $$QMAKE_CFLAGS_MT_DLLDBG
     }
 } else {
-    DESTDIR = $$PWD/../../../bin/release
-    MOC_DIR += $$PWD/../../../tmp/release
-    OBJECTS_DIR += $$PWD/../../../tmp/release
-    INCLUDEPATH += $$PWD/../../../tmp/release
+    message("Config:  Release")
+#    DESTDIR = $$PWD/../../../bin/release
+#    MOC_DIR += $$PWD/../../../tmp/release
+#    OBJECTS_DIR += $$PWD/../../../tmp/release
+#    INCLUDEPATH += $$PWD/../../../tmp/release
+#    DESTDIR = ./bin/release
+#    MOC_DIR += ./tmp/release
+#    OBJECTS_DIR += ./tmp/release
+#    INCLUDEPATH += ./tmp/release
 
     QMAKE_CFLAGS_RELEASE = $$unique(QMAKE_CFLAGS_RELEASE)
     QMAKE_CXXFLAGS_RELEASE = $$unique(QMAKE_CXXFLAGS_RELEASE)
@@ -65,42 +75,53 @@ CONFIG(debug, debug|release) {
     }
 }
 
-HEADERS += ../../../src/sokit/resource.h \
-    ../../../src/sokit/setting.h \
-    ../../../src/sokit/toolkit.h \
-    ../../../src/sokit/baseform.h \
-    ../../../src/sokit/clientform.h \
-    ../../../src/sokit/clientskt.h \
-    ../../../src/sokit/helpform.h \
-    ../../../src/sokit/logger.h \
-    ../../../src/sokit/main.h \
-    ../../../src/sokit/notepadform.h \
-    ../../../src/sokit/transferskt.h \
-    ../../../src/sokit/transferform.h \
-    ../../../src/sokit/serverskt.h \
-    ../../../src/sokit/serverform.h
-SOURCES += ../../../src/sokit/baseform.cpp \
-    ../../../src/sokit/clientform.cpp \
-    ../../../src/sokit/clientskt.cpp \
-    ../../../src/sokit/helpform.cpp \
-    ../../../src/sokit/logger.cpp \
-    ../../../src/sokit/main.cpp \
-    ../../../src/sokit/notepadform.cpp \
-    ../../../src/sokit/serverform.cpp \
-    ../../../src/sokit/serverskt.cpp \
-    ../../../src/sokit/setting.cpp \
-    ../../../src/sokit/toolkit.cpp \
-    ../../../src/sokit/transferform.cpp \
-    ../../../src/sokit/transferskt.cpp
-FORMS += ../../../src/sokit/clientform.ui \
-    ../../../src/sokit/helpform.ui \
-    ../../../src/sokit/serverform.ui \
-    ../../../src/sokit/transferform.ui
-TRANSLATIONS += ../../../src/sokit/sokit.ts
-RESOURCES += ../../../src/sokit/icons.qrc
 
-QMAKE_PRE_LINK = lupdate $$PWD/sokit.pro
-QMAKE_POST_LINK = lrelease $$PWD/../../../src/sokit/sokit.ts -qm $$DESTDIR/sokit.lan
+#message(1 $$PWD --  $$DESTDIR ; $$absolute_path($$RCC_DIR) ; ))
+
+#message(4 INCLUDEPATH: $$INCLUDEPATH)
+
+ROOT_SRC = ../../../src/sokit
+
+#message($$ROOT_SRC)
+HEADERS += \
+    $$ROOT_SRC/resource.h \
+    $$ROOT_SRC/setting.h \
+    $$ROOT_SRC/toolkit.h \
+    $$ROOT_SRC/baseform.h \
+    $$ROOT_SRC/clientform.h \
+    $$ROOT_SRC/clientskt.h \
+    $$ROOT_SRC/helpform.h \
+    $$ROOT_SRC/logger.h \
+    $$ROOT_SRC/main.h \
+    $$ROOT_SRC/notepadform.h \
+    $$ROOT_SRC/transferskt.h \
+    $$ROOT_SRC/transferform.h \
+    $$ROOT_SRC/serverskt.h \
+    $$ROOT_SRC/serverform.h
+SOURCES += \
+    $$ROOT_SRC/baseform.cpp \
+    $$ROOT_SRC/clientform.cpp \
+    $$ROOT_SRC/clientskt.cpp \
+    $$ROOT_SRC/helpform.cpp \
+    $$ROOT_SRC/logger.cpp \
+    $$ROOT_SRC/main.cpp \
+    $$ROOT_SRC/notepadform.cpp \
+    $$ROOT_SRC/serverform.cpp \
+    $$ROOT_SRC/serverskt.cpp \
+    $$ROOT_SRC/setting.cpp \
+    $$ROOT_SRC/toolkit.cpp \
+    $$ROOT_SRC/transferform.cpp \
+    $$ROOT_SRC/transferskt.cpp
+FORMS += \
+    $$ROOT_SRC/clientform.ui \
+    $$ROOT_SRC/helpform.ui \
+    $$ROOT_SRC/serverform.ui \
+    $$ROOT_SRC/transferform.ui
+TRANSLATIONS += $$ROOT_SRC/sokit.ts
+RESOURCES += $$ROOT_SRC/icons.qrc
+
+#QMAKE_PRE_LINK = lupdate $$PWD/sokit.pro
+QMAKE_POST_LINK = lrelease $$clean_path($$PWD/../../../src/sokit/sokit.ts) -qm sokit.lan #$$DESTDIR/sokit.lan
 
 win32 {
     RC_FILE = ../../../src/sokit/sokit.rc
@@ -120,3 +141,4 @@ win32 {
     }
 }
 
+message($$clean_path($$PWD/../../../src/sokit/sokit.ts))

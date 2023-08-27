@@ -1,34 +1,34 @@
 #ifndef __TRANSFERFORM_H__
 #define __TRANSFERFORM_H__
 
-#include "baseform.h"
 #include "ui_transferform.h"
+#include "baseform.h"
 
 class TransferSkt;
-class TransferForm : public BaseForm {
-  Q_OBJECT
+
+class TransferForm : public BaseForm
+{
+	Q_OBJECT
 
 public:
-  // NOTE: Fix deprecation warnings caused by QFlags
-  // TransferForm(QWidget *parent = 0, Qt::WindowFlags flags = 0);
-  TransferForm(QWidget *parent = 0, Qt::WindowFlags flags = QFlag(0));
-  ~TransferForm();
+	TransferForm(QWidget* p = nullptr, Qt::WindowFlags f = Qt::WindowFlags(0));
+	~TransferForm() override;
 
 protected:
-  virtual bool initForm();
-  virtual bool initHotkeys();
-  virtual void initConfig();
-  virtual void saveConfig();
-  virtual void send(const QString &data, const QString &dir);
-  virtual void kill(QStringList &list);
+	bool initForm() override;
+	bool initHotkeys() override;
+	void initConfig() override;
+	void saveConfig() override;
+	void send(const QString& data, const QString& dir) override;
+	void kill(QStringList& list) override;
 
 private slots:
-  void trigger(bool start);
-  void stop();
+	void trigger(bool start);
+	void stop();
 
 private:
-  TransferSkt *m_server;
-  Ui::TransferForm m_ui;
+	TransferSkt* m_server;
+	Ui::TransferForm m_ui;
 };
 
-#endif        // __TRANSFERFORM_H__
+#endif // __TRANSFERFORM_H__
