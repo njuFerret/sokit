@@ -8,7 +8,7 @@
 #include "notepadform.h"
 #include "serverform.h"
 #include "setting.h"
-#include "toolkit.h"
+// #include "toolkit.h"
 #include "transferform.h"
 
 #define SET_KEY_FTNM "/font/name"
@@ -63,8 +63,9 @@ bool Sokit::initTranslator() {
 }
 
 void Sokit::initFont() {
-  QFontDatabase db;
-  QStringList fs = db.families();
+  //  QFontDatabase db;
+  //  QStringList fs = db.families();
+  QStringList fs = QFontDatabase::families();
 
   QFont font;
 
@@ -91,9 +92,11 @@ void Sokit::initFont() {
   if (match > 0) {
     font.setFamily(family);
 
-    if (db.isSmoothlyScalable(family))
+    //    if (db.isSmoothlyScalable(family))
+    if (QFontDatabase::isSmoothlyScalable(family)) {
       font.setStyleStrategy(
           static_cast<QFont::StyleStrategy>(QFont::PreferAntialias | QFont::PreferOutline | QFont::PreferQuality));
+    }
 
     int nsize = size.toInt();
     if (nsize > 0 && nsize < 20)
