@@ -22,7 +22,7 @@ public:
 
   static QString path();
   static void save(const QString &section, const QString &prefix, const QComboBox &cmb, bool all = true);
-  static void lord(const QString &section, const QString &prefix, QComboBox &cmb, bool all = true);
+  static void load(const QString &section, const QString &prefix, QComboBox &cmb, bool all = true);
 
   static void flush();
 

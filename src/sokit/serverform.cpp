@@ -32,10 +32,10 @@ ServerForm::~ServerForm() {
 
 void ServerForm::initConfig() {
   QString sss(SET_SEC_SVR);
-  Setting::lord(sss + SET_KEY_CMBTA, SET_PFX_CMBITM, *m_ui.cmbTcpAddr, false);
-  Setting::lord(sss + SET_KEY_CMBUA, SET_PFX_CMBITM, *m_ui.cmbUdpAddr, false);
-  Setting::lord(sss + SET_KEY_CMBTP, SET_PFX_CMBITM, *m_ui.cmbTcpPort);
-  Setting::lord(sss + SET_KEY_CMBUP, SET_PFX_CMBITM, *m_ui.cmbUdpPort);
+  Setting::load(sss + SET_KEY_CMBTA, SET_PFX_CMBITM, *m_ui.cmbTcpAddr, false);
+  Setting::load(sss + SET_KEY_CMBUA, SET_PFX_CMBITM, *m_ui.cmbUdpAddr, false);
+  Setting::load(sss + SET_KEY_CMBTP, SET_PFX_CMBITM, *m_ui.cmbTcpPort);
+  Setting::load(sss + SET_KEY_CMBUP, SET_PFX_CMBITM, *m_ui.cmbUdpPort);
 
   QString skl(SET_SEC_DIR);
   skl += SET_KEY_LOG;

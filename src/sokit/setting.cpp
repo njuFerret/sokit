@@ -82,7 +82,7 @@ void Setting::save(const QString &section, const QString &prefix, const QComboBo
   store.endGroup();
 }
 
-void Setting::lord(const QString &section, const QString &prefix, QComboBox &cmb, bool all) {
+void Setting::load(const QString &section, const QString &prefix, QComboBox &cmb, bool all) {
   cmb.clear();
 
   QSettings &store = storage();

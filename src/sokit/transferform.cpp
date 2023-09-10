@@ -35,10 +35,10 @@ TransferForm::~TransferForm() {
 
 void TransferForm::initConfig() {
   QString sst(SET_SEC_TRANS);
-  Setting::lord(sst + SET_KEY_CMBSA, SET_PFX_CMBITM, *m_ui.cmbSrcAddr, false);
-  Setting::lord(sst + SET_KEY_CMBDA, SET_PFX_CMBITM, *m_ui.cmbDstAddr);
-  Setting::lord(sst + SET_KEY_CMBSP, SET_PFX_CMBITM, *m_ui.cmbSrcPort);
-  Setting::lord(sst + SET_KEY_CMBDP, SET_PFX_CMBITM, *m_ui.cmbDstPort);
+  Setting::load(sst + SET_KEY_CMBSA, SET_PFX_CMBITM, *m_ui.cmbSrcAddr, false);
+  Setting::load(sst + SET_KEY_CMBDA, SET_PFX_CMBITM, *m_ui.cmbDstAddr);
+  Setting::load(sst + SET_KEY_CMBSP, SET_PFX_CMBITM, *m_ui.cmbSrcPort);
+  Setting::load(sst + SET_KEY_CMBDP, SET_PFX_CMBITM, *m_ui.cmbDstPort);
 
   QString skl(SET_SEC_DIR);
   skl += SET_KEY_LOG;
