@@ -184,8 +184,8 @@ void ServerSktTcp::newConnection() {
       connect(client, SIGNAL(readyRead()), this, SLOT(newData()));
       connect(client, SIGNAL(destroyed(QObject *)), this, SLOT(close(QObject *)));
       connect(client, SIGNAL(disconnected()), client, SLOT(deleteLater()));
-      connect(client, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
-
+      // WARNING connect(client, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+      connect(client, &QTcpSocket::errorOccurred, this, &ServerSktTcp::error);
       setCookie(conn->key, conn);
     }
     client = server->nextPendingConnection();
@@ -261,7 +261,8 @@ void ServerSktUdp::error() {
 bool ServerSktUdp::open() {
   if (m_server.bind(addr(), port(), QUdpSocket::ShareAddress)) {
     connect(&m_server, SIGNAL(readyRead()), this, SLOT(newData()));
-    connect(&m_server, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+    // WARNING connect(&m_server, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+    connect(&m_server, &QTcpSocket::errorOccurred, this, &ServerSktUdp::error);
     connect(&m_timer, SIGNAL(timeout()), this, SLOT(check()));
 
     m_timer.start(2000);

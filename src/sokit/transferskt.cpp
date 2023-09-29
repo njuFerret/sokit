@@ -217,13 +217,15 @@ void TransferSktTcp::newConnection() {
         connect(src, SIGNAL(readyRead()), this, SLOT(newData()));
         connect(src, SIGNAL(destroyed(QObject *)), this, SLOT(close(QObject *)));
         connect(src, SIGNAL(disconnected()), src, SLOT(deleteLater()));
-        connect(src, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+        // WARNING connect(src, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+        connect(src, &QTcpSocket::errorOccurred, this, &TransferSktTcp::error);
 
         connect(dst, SIGNAL(readyRead()), this, SLOT(newData()));
         connect(dst, SIGNAL(destroyed(QObject *)), this, SLOT(close(QObject *)));
         connect(dst, SIGNAL(disconnected()), dst, SLOT(deleteLater()));
         connect(dst, SIGNAL(connected()), this, SLOT(asynConnection()));
-        connect(dst, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+        // WARNING connect(dst, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+        connect(dst, &QTcpSocket::errorOccurred, this, &TransferSktTcp::error);
 
         dst->connectToHost(dstAddr(), dstPort());
 
@@ -335,7 +337,8 @@ void TransferSktUdp::error() {
 bool TransferSktUdp::open() {
   if (m_server.bind(srcAddr(), srcPort(), QUdpSocket::ShareAddress)) {
     connect(&m_server, SIGNAL(readyRead()), this, SLOT(newData()));
-    connect(&m_server, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+    // WARNING connect(&m_server, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+    connect(&m_server, &QTcpSocket::errorOccurred, this, &TransferSktUdp::error);
     connect(&m_timer, SIGNAL(timeout()), this, SLOT(check()));
 
     m_timer.start(2000);
@@ -415,9 +418,11 @@ void TransferSktUdp::newData() {
             conn->addr = addr;
             conn->port = port;
 
-            connect(dst, SIGNAL(readyRead()), this, SLOT(newData()));
-            connect(dst, SIGNAL(destroyed(QObject *)), this, SLOT(close(QObject *)));
-            connect(dst, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+            connect(dst, &QTcpSocket::readyRead, this, &TransferSktUdp::newData);
+            // connect(dst, SIGNAL(destroyed(QObject *)), this, SLOT(close(QObject *)));
+            connect(dst, &QTcpSocket::destroyed, this, qOverload<QObject *>(&TransferSktUdp::close));
+            // WARNING connect(dst, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
+            connect(dst, &QTcpSocket::errorOccurred, this, &TransferSktUdp::error);
 
             dst->connectToHost(dstAddr(), dstPort());
 

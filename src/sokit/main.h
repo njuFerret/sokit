@@ -1,33 +1,32 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
-#include <QTranslator>
 #include <QApplication>
 #include <QMainWindow>
+#include <QTranslator>
 
-class Sokit : public QApplication
-{
-	Q_OBJECT
+class Sokit : public QApplication {
+  Q_OBJECT
 
 public:
-	Sokit(int& argc, char** argv);
-	~Sokit() override;
+  Sokit(int &argc, char **argv);
+  ~Sokit() override;
 
-	bool initTranslator();
-	bool initUI();
-	void show();
-	void close();
+  bool initTranslator();
+  bool initUI();
+  void show();
+  void close();
 
 private slots:
-	void ontop();
+  void ontop();
 
 private:
-	void initFont();
-	void initDefaultActionsName();
+  void initFont();
+  void initDefaultActionsName();
 
 private:
-	QMainWindow m_wnd;
-	QTranslator m_trans;
+  QMainWindow m_wnd;
+  QTranslator m_trans;
 };
 
-#endif //__MAIN_H__
+#endif        //__MAIN_H__

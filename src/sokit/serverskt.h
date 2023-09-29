@@ -1,135 +1,142 @@
 #ifndef __SERVERSKT_H__
 #define __SERVERSKT_H__
 
+#include <QDateTime>
 #include <QHash>
 #include <QTcpServer>
-#include <QUdpSocket>
-#include <QDateTime>
 #include <QTimer>
+#include <QUdpSocket>
 
-class ServerSkt : public QObject
-{
-	using OBJMAP = QHash<QString, void*>;
+class ServerSkt : public QObject {
+  using OBJMAP = QHash<QString, void *>;
 
-	Q_OBJECT
+  Q_OBJECT
 
 public:
-	ServerSkt(QObject* parent = nullptr);
-	~ServerSkt() override;
+  ServerSkt(QObject *parent = nullptr);
+  ~ServerSkt() override;
 
-	virtual QString name() const { return "General"; };
+  virtual QString name() const { return "General"; };
 
-	bool start(const QHostAddress& ip, quint16 port);
-	void kill(const QString& key);
-	void stop();
+  bool start(const QHostAddress &ip, quint16 port);
+  void kill(const QString &key);
+  void stop();
 
-	void send(const QString& key, const QString& data);
+  void send(const QString &key, const QString &data);
 
-	const QHostAddress& addr() const { return m_ip; };
-	quint16 port() const { return m_port; };
+  const QHostAddress &addr() const { return m_ip; };
+  quint16 port() const { return m_port; };
 
 signals:
-	void connOpen(const QString& key);
-	void connClose(const QString& key);
-	void message(const QString& msg);
-	void dumpbin(const QString& title, const char* data, quint32 len);
+  void connOpen(const QString &key);
+  void connClose(const QString &key);
+  void message(const QString &msg);
+  void dumpbin(const QString &title, const char *data, quint32 len);
 
-	void countRecv(qint32 bytes);
-	void countSend(qint32 bytes);
+  void countRecv(qint32 bytes);
+  void countSend(qint32 bytes);
 
 protected:
-	void dump(const char* buf, qint32 len, bool isSend, const QString& key);
-	void show(const QString& msg);
+  void dump(const char *buf, qint32 len, bool isSend, const QString &key);
+  void show(const QString &msg);
 
-	void setError(const QString& err);
+  void setError(const QString &err);
 
-	void recordRecv(qint32 bytes);
-	void recordSend(qint32 bytes);
+  void recordRecv(qint32 bytes);
+  void recordSend(qint32 bytes);
 
-	void getKeys(QStringList& res);
-	void setCookie(const QString& k, void* v);
-	void unsetCookie(const QString& k);
-	void* getCookie(const QString& k);
+  void getKeys(QStringList &res);
+  void setCookie(const QString &k, void *v);
+  void unsetCookie(const QString &k);
+  void *getCookie(const QString &k);
 
-
-	virtual bool open() =0;
-	virtual bool close(void* cookie) =0;
-	virtual void send(void* cookie, const QByteArray& bin) =0;
-	virtual void close() =0;
+  virtual bool open() = 0;
+  virtual bool close(void *cookie) = 0;
+  virtual void send(void *cookie, const QByteArray &bin) = 0;
+  virtual void close() = 0;
 
 private:
-	bool m_started;
-	QHostAddress m_ip;
-	quint16 m_port;
+  bool m_started;
+  QHostAddress m_ip;
+  quint16 m_port;
 
-	OBJMAP m_conns;
-	QString m_error;
+  OBJMAP m_conns;
+  QString m_error;
 };
 
-class ServerSktTcp : public ServerSkt
-{
-	using Conn = struct _Conn
-	{
-		QTcpSocket* client;
-		QString key;
-	};
+class ServerSktTcp : public ServerSkt {
+  //	using Conn = struct _Conn
+  //	{
+  //		QTcpSocket* client;
+  //		QString key;
+  //	};
 
-	Q_OBJECT
+  typedef struct _Conn {
+    QTcpSocket *client;
+    QString key;
+  } Conn;
+
+  Q_OBJECT
 
 public:
-	ServerSktTcp(QObject* parent = nullptr);
-	~ServerSktTcp() override;
+  ServerSktTcp(QObject *parent = nullptr);
+  ~ServerSktTcp() override;
 
-	QString name() const override { return "TCP"; };
+  QString name() const override { return "TCP"; };
 
 protected:
-	bool open() override;
-	bool close(void* cookie) override;
-	void send(void* cookie, const QByteArray& bin) override;
-	void close() override;
+  bool open() override;
+  bool close(void *cookie) override;
+  void send(void *cookie, const QByteArray &bin) override;
+  void close() override;
 
 private slots:
-	void newConnection();
-	void newData();
-	void error();
-	void close(QObject* obj);
+  void newConnection();
+  void newData();
+  void error();
+  void close(QObject *obj);
 
 private:
-	QTcpServer m_server;
+  QTcpServer m_server;
 };
 
-class ServerSktUdp : public ServerSkt
-{
-	using Conn = struct _Conn
-	{
-		QHostAddress addr;
-		quint16 port;
-		QDateTime stamp;
-		QString key;
-	};
+class ServerSktUdp : public ServerSkt {
+  //  using Conn = struct _Conn {
+  //    QHostAddress addr;
+  //    quint16 port;
+  //    QDateTime stamp;
+  //    QString key;
+  //  };
 
-	Q_OBJECT
+  typedef struct _Conn {
+    QHostAddress addr;
+    quint16 port;
+    QDateTime stamp;
+    QString key;
+  } Conn;
+
+  Q_OBJECT
 
 public:
-	ServerSktUdp(QObject* parent = nullptr);
-	~ServerSktUdp() override;
+  ServerSktUdp(QObject *parent = nullptr);
+  ~ServerSktUdp() override;
 
-	QString name() const override { return "UDP"; };
+  QString name() const override { return "UDP"; };
 
 protected:
-	bool open() override;
-	bool close(void* cookie) override;
-	void send(void* cookie, const QByteArray& bin) override;
-	void close() override;
+  bool open() override;
+  bool close(void *cookie) override;
+  void send(void *cookie, const QByteArray &bin) override;
+  void close() override;
 
 private slots:
-	void newData();
-	void error();
-	void check();
+  void newData();
+  void error();
+  void check();
 
 private:
-	QUdpSocket m_server;
-	QTimer m_timer;
+  QUdpSocket m_server;
+  QTimer m_timer;
 };
 
-#endif // __SERVERSKT_H__
+#endif        // __SERVERSKT_H__
