@@ -52,9 +52,9 @@ ClientSktTcp::ClientSktTcp(QObject *parent) : ClientSkt(parent) {}
 ClientSktTcp::~ClientSktTcp() {}
 
 bool ClientSktTcp::open() {
-  connect(&m_socket, SIGNAL(readyRead()), this, SLOT(newData()));
-  connect(&m_socket, SIGNAL(disconnected()), this, SLOT(closed()));
-  connect(&m_socket, SIGNAL(connected()), this, SLOT(asynConn()));
+  connect(&m_socket, &QTcpSocket::readyRead, this, &ClientSktTcp::newData);
+  connect(&m_socket, &QTcpSocket::disconnected, this, &ClientSktTcp::closed);
+  connect(&m_socket, &QTcpSocket::connected, this, &ClientSktTcp::asynConn);
   // WARNING	connect(&m_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
   connect(&m_socket, &QTcpSocket::errorOccurred, this, &ClientSktTcp::error);
 
@@ -149,9 +149,9 @@ void ClientSktUdp::error() {
 }
 
 bool ClientSktUdp::open() {
-  connect(&m_socket, SIGNAL(readyRead()), this, SLOT(newData()));
-  connect(&m_socket, SIGNAL(disconnected()), this, SLOT(closed()));
-  connect(&m_socket, SIGNAL(connected()), this, SLOT(asynConn()));
+  connect(&m_socket, &QUdpSocket::readyRead, this, &ClientSktUdp::newData);
+  connect(&m_socket, &QUdpSocket::disconnected, this, &ClientSktUdp::closed);
+  connect(&m_socket, &QUdpSocket::connected, this, &ClientSktUdp::asynConn);
   // WARNING  connect(&m_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
   connect(&m_socket, &QUdpSocket::errorOccurred, this, &ClientSktUdp::error);
 

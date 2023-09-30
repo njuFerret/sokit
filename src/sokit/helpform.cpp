@@ -14,5 +14,5 @@ HelpForm::~HelpForm() {}
 
 void HelpForm::init() {
   auto k = new QShortcut(QKeySequence(Qt::Key_F1), this);
-  connect(k, SIGNAL(activated()), this, SLOT(close()));
+  connect(k, &QShortcut::activated, this, &HelpForm::close);
 }
