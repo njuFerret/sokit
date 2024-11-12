@@ -7,14 +7,19 @@ TARGET = sokit
 
 QT += gui widgets network
 #CONFIG += debug_and_release build_all thread
+
+
+SRC_BASE = $$clean_path($$PWD/../../..)
+message(SRC_BASE=$${SRC_BASE})
+
 CONFIG += release
 DEFINES += QT_NETWORK_LIB
 INCLUDEPATH += .
-INCLUDEPATH += ./../../../tmp
-INCLUDEPATH += ./../../../src/sokit
+INCLUDEPATH += $${SRC_BASE}/tmp
+INCLUDEPATH += $${SRC_BASE}/src/sokit
 DEPENDPATH += .
-UI_DIR += ./../../../tmp
-RCC_DIR += ./../../../tmp
+UI_DIR += $${SRC_BASE}/tmp
+RCC_DIR += $${SRC_BASE}/tmp
 
 win32 {
 #    DEFINES += QT_LARGEFILE_SUPPORT
@@ -29,10 +34,10 @@ win32 {
 
 CONFIG(debug, debug|release) {
     message("Config:  Debug")
-    DESTDIR = $$PWD/../../../bin/debug
-    MOC_DIR += $$PWD/../../../tmp/debug
-    OBJECTS_DIR += $$PWD/../../../tmp/debug
-    INCLUDEPATH += $$PWD/../../../tmp/debug
+    DESTDIR =  $$SRC_BASE/bin/debug
+    MOC_DIR +=  $$SRC_BASE/tmp/debug
+    OBJECTS_DIR +=  $$SRC_BASE/tmp/debug
+    INCLUDEPATH +=  $$SRC_BASE/tmp/debug
 
     QMAKE_CFLAGS_DEBUG = $$unique(QMAKE_CFLAGS_DEBUG)
     QMAKE_CXXFLAGS_DEBUG = $$unique(QMAKE_CFLAGS_DEBUG)
@@ -80,48 +85,46 @@ CONFIG(debug, debug|release) {
 
 #message(4 INCLUDEPATH: $$INCLUDEPATH)
 
-ROOT_SRC = ../../../src/sokit
 
-#message($$ROOT_SRC)
 HEADERS += \
-    $$ROOT_SRC/resource.h \
-    $$ROOT_SRC/setting.h \
-    $$ROOT_SRC/toolkit.h \
-    $$ROOT_SRC/baseform.h \
-    $$ROOT_SRC/clientform.h \
-    $$ROOT_SRC/clientskt.h \
-    $$ROOT_SRC/helpform.h \
-    $$ROOT_SRC/logger.h \
-    $$ROOT_SRC/main.h \
-    $$ROOT_SRC/notepadform.h \
-    $$ROOT_SRC/transferskt.h \
-    $$ROOT_SRC/transferform.h \
-    $$ROOT_SRC/serverskt.h \
-    $$ROOT_SRC/serverform.h
+    $$SRC_BASE/src/sokit/resource.h \
+    $$SRC_BASE/src/sokit/setting.h \
+    $$SRC_BASE/src/sokit/toolkit.h \
+    $$SRC_BASE/src/sokit/baseform.h \
+    $$SRC_BASE/src/sokit/clientform.h \
+    $$SRC_BASE/src/sokit/clientskt.h \
+    $$SRC_BASE/src/sokit/helpform.h \
+    $$SRC_BASE/src/sokit/logger.h \
+    $$SRC_BASE/src/sokit/main.h \
+    $$SRC_BASE/src/sokit/notepadform.h \
+    $$SRC_BASE/src/sokit/transferskt.h \
+    $$SRC_BASE/src/sokit/transferform.h \
+    $$SRC_BASE/src/sokit/serverskt.h \
+    $$SRC_BASE/src/sokit/serverform.h
 SOURCES += \
-    $$ROOT_SRC/baseform.cpp \
-    $$ROOT_SRC/clientform.cpp \
-    $$ROOT_SRC/clientskt.cpp \
-    $$ROOT_SRC/helpform.cpp \
-    $$ROOT_SRC/logger.cpp \
-    $$ROOT_SRC/main.cpp \
-    $$ROOT_SRC/notepadform.cpp \
-    $$ROOT_SRC/serverform.cpp \
-    $$ROOT_SRC/serverskt.cpp \
-    $$ROOT_SRC/setting.cpp \
-    $$ROOT_SRC/toolkit.cpp \
-    $$ROOT_SRC/transferform.cpp \
-    $$ROOT_SRC/transferskt.cpp
+    $$SRC_BASE/src/sokit/baseform.cpp \
+    $$SRC_BASE/src/sokit/clientform.cpp \
+    $$SRC_BASE/src/sokit/clientskt.cpp \
+    $$SRC_BASE/src/sokit/helpform.cpp \
+    $$SRC_BASE/src/sokit/logger.cpp \
+    $$SRC_BASE/src/sokit/main.cpp \
+    $$SRC_BASE/src/sokit/notepadform.cpp \
+    $$SRC_BASE/src/sokit/serverform.cpp \
+    $$SRC_BASE/src/sokit/serverskt.cpp \
+    $$SRC_BASE/src/sokit/setting.cpp \
+    $$SRC_BASE/src/sokit/toolkit.cpp \
+    $$SRC_BASE/src/sokit/transferform.cpp \
+    $$SRC_BASE/src/sokit/transferskt.cpp
 FORMS += \
-    $$ROOT_SRC/clientform.ui \
-    $$ROOT_SRC/helpform.ui \
-    $$ROOT_SRC/serverform.ui \
-    $$ROOT_SRC/transferform.ui
-TRANSLATIONS += $$ROOT_SRC/sokit.ts
-RESOURCES += $$ROOT_SRC/icons.qrc
+    $$SRC_BASE/src/sokit/clientform.ui \
+    $$SRC_BASE/src/sokit/helpform.ui \
+    $$SRC_BASE/src/sokit/serverform.ui \
+    $$SRC_BASE/src/sokit/transferform.ui
+TRANSLATIONS += $$SRC_BASE/src/sokit/sokit.ts
+RESOURCES += $$SRC_BASE/src/sokit/icons.qrc
 
 #QMAKE_PRE_LINK = lupdate $$PWD/sokit.pro
-QMAKE_POST_LINK = lrelease $$clean_path($$PWD/../../../src/sokit/sokit.ts) -qm sokit.lan #$$DESTDIR/sokit.lan
+QMAKE_POST_LINK = lrelease $$SRC_BASE/src/sokit/sokit.ts -qm sokit.lan #$$DESTDIR/sokit.lan
 
 win32 {
     RC_FILE = ../../../src/sokit/sokit.rc
@@ -141,4 +144,4 @@ win32 {
     }
 }
 
-message($$clean_path($$PWD/../../../src/sokit/sokit.ts))
+
