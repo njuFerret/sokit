@@ -153,7 +153,7 @@ jobs:
           make release -j
           cd..
           rd /q /s tmp 
-
+          dir bin
           mkdir %NAME%/platforms
           for /f %v in (release.txt) do copy .\bin\%v .\%NAME%\%v /y
           7z a %NAME%_qt-%_qt_ver%.7z %NAME%
