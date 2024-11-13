@@ -140,6 +140,7 @@ jobs:
         shell: cmd
         run: | 
           set NAME=sokit
+          set START=%CD%
           set _qt_ver=${{ needs.versions_config.outputs.qt-version }}
           set INSTALL_BASE=${{ needs.versions_config.outputs.install-prefix }}
           set QT_QMAKE_DIR=%INSTALL_BASE%\Qt\%_qt_ver%\qt\bin
@@ -150,14 +151,19 @@ jobs:
           cd tmp
           qmake ..\build\general\qmake\%NAME%.pro
           make release -j
-          cd..
+          cd ..
           rd /q /s tmp 
+
+          echo --------------------------windeployqt----------------------------
           cd bin
           windeployqt --release --no-quick-import --no-translations sokit.exe
-          cd..
+          cd ..
+          echo --------------------------mkdir %NAME%----------------------------
           mkdir %NAME%/platforms
+          echo --------------------------copy files----------------------------
           for /f %%v in (release.txt) do copy .\bin\%%v .\%NAME%\%v /y
           dir
+          echo --------------------------zippe %NAME%----------------------------
           7z a %NAME%_qt-%_qt_ver%.7z %CD%\%NAME%
           dir
 
