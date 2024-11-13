@@ -142,6 +142,7 @@ jobs:
         run: | 
           set NAME=sokit
           set _qt_ver=${{ needs.versions_config.outputs.qt-version }}
+          set INSTALL_BASE=${{ needs.versions_config.outputs.install-prefix }}
           set QT_QMAKE_DIR=%INSTALL_BASE%\Qt\%_qt_ver%\qt\bin
           @REM mingw 必须放在第一个
           set PATH=%QT_QMAKE_DIR%;%PATH%          
