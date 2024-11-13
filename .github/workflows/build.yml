@@ -122,7 +122,6 @@ jobs:
 
           echo -------------------- test qmake --------------------------
           qmake --version 
-     
           echo -------------------- test python --------------------------
           python -V
           echo -------------------- test perl --------------------------
@@ -153,7 +152,9 @@ jobs:
           make release -j
           cd..
           rd /q /s tmp 
-          dir bin
+          cd bin
+          windeployqt --release --no-quick-import --no-translations sokit.exe
+          cd..
           mkdir %NAME%/platforms
           for /f %%v in (release.txt) do copy .\bin\%%v .\%NAME%\%v /y
           7z a %NAME%_qt-%_qt_ver%.7z %NAME%
