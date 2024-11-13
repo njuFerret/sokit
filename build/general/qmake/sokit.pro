@@ -80,6 +80,8 @@ CONFIG(debug, debug|release) {
     }
 }
 
+DESTDIR = $$SRC_BASE/bin
+
 
 #message(1 $$PWD --  $$DESTDIR ; $$absolute_path($$RCC_DIR) ; ))
 
@@ -123,8 +125,8 @@ FORMS += \
 TRANSLATIONS += $$SRC_BASE/src/sokit/sokit.ts
 RESOURCES += $$SRC_BASE/src/sokit/icons.qrc
 
-#QMAKE_PRE_LINK = lupdate $$PWD/sokit.pro
-QMAKE_POST_LINK = lrelease $$SRC_BASE/src/sokit/sokit.ts -qm sokit.lan #$$DESTDIR/sokit.lan
+
+QMAKE_POST_LINK = lrelease $$SRC_BASE/src/sokit/sokit.ts -qm $$DESTDIR/sokit.lan
 
 win32 {
     RC_FILE = ../../../src/sokit/sokit.rc

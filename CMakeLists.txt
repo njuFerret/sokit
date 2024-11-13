@@ -27,8 +27,14 @@ else()
 	add_executable(${PROJECT_NAME} ${SRC_FILES} ${HEAD_FILES} "qml.qrc" )
 endif()
 
-qt_add_translations(${PROJECT_NAME} TS_FILES "src/sokit/sokit.ts")
+ set_source_files_properties(
+        src/sokit/sokit.ts
+     PROPERTIES 
+        OUTPUT_LOCATION "${PROJECT_SOURCE_DIR}/bin"
+ )
 
+qt_add_translations(${PROJECT_NAME} TS_FILES src/sokit/sokit.ts QM_FILES_OUTPUT_VARIABLE qm_files)
+ 
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Network )
 
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE}/)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
