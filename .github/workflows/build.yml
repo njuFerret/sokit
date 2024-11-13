@@ -161,7 +161,7 @@ jobs:
           echo --------------------------mkdir %NAME%----------------------------
           mkdir %NAME%\platforms          
           echo --------------------------copy files----------------------------
-          for /f %%v in (release.txt) do copy .\bin\%%v .\%NAME%\%v /y
+          for /f %%v in (release.txt) do copy .\bin\%%v .\%NAME%\%%v /y
           dir
           echo --------------------------zippe %NAME%----------------------------
           7z a %NAME%_qt-%_qt_ver%.7z %CD%\%NAME%
