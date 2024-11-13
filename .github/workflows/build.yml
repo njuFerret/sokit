@@ -159,7 +159,7 @@ jobs:
           windeployqt --release --no-quick-import --no-translations sokit.exe
           cd ..
           echo --------------------------mkdir %NAME%----------------------------
-          mkdir %NAME%/platforms
+          mkdir %NAME%\platforms          
           echo --------------------------copy files----------------------------
           for /f %%v in (release.txt) do copy .\bin\%%v .\%NAME%\%v /y
           dir
