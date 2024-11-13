@@ -64,8 +64,8 @@ jobs:
 
 
 
-  build-qt:
-    name: build qt
+  build:
+    name: build sokit
     runs-on: windows-2022
     needs:
       - versions_config
@@ -78,7 +78,7 @@ jobs:
         uses: actions/checkout@v4.2.2
 
 
-      - name: prepare libraries
+      - name: download libraries
         shell: cmd
         run: |
           @REM 检查空格！！！！尼玛！！！
@@ -101,7 +101,7 @@ jobs:
 
           dir %QT_INSTALL_DIR%
 
-      - name: toolsets Test 
+      - name: toolsets setup 
         shell: cmd
         # system(windows-2022) has shipped with cmake/7zip
         run: |
@@ -119,257 +119,73 @@ jobs:
           @REM mingw 必须放在第一个
           set PATH=%CD%\MinGW\bin;%PATH%
 
-          echo -------------------- test cmake --------------------------
-          cmake --version | findstr version
-          echo -------------------- test ninja --------------------------
-          ninja --version          
+          echo -------------------- test qmake --------------------------
+          qmake --version 
+     
           echo -------------------- test python --------------------------
           python -V
           echo -------------------- test perl --------------------------
           perl -v | findstr version                        
           echo -------------------- test git --------------------------
           git --version
-          echo -------------------- test git --------------------------
+          echo -------------------- test ruby --------------------------
           ruby --version          
           echo -------------------- test 7z --------------------------
           7z | findstr 7-Zip
           echo -------------------- test mingw --------------------------
           g++ -v
-          echo -------------------- test libclang --------------------------
-          clang --version         
           echo -------------------- test end --------------------------
 
+      - name: build and zipped
+        run: | 
+          set NAME=sokit
+          set _qt_ver=${{ needs.versions_config.outputs.qt-version }}
+          mkdir tmp
+          cd tmp
+          qmake ..\build\general\qmake\%NAME%.pro
+          make release -j
+          cd..
+          rd /q /s tmp 
 
-  #     - name: Config & build & install Qt
-  #       shell: cmd
-  #       run: |          
-  #         set mingw=${{ needs.versions_config.outputs.mingw-version }}
-  #         set START=%CD%
-  #         set _qt_ver=${{ needs.versions_config.outputs.qt-version }}
-  #         set _openssl_ver=${{ needs.versions_config.outputs.openssl-version }}
-  #         set INSTALL_BASE=${{ needs.versions_config.outputs.install-prefix }}
+          mkdir %NAME%/platforms
+          for /f %v in (release.txt) do copy .\bin\%v .\%NAME%\%v /y
+          7z a %NAME%_qt-%_qt_ver%.7z %NAME%
 
-  #         set CLANG_INSTALL_DIR=%INSTALL_BASE%\libclang
-          
-  #         set _qt_src=qt-everywhere-src-%_qt_ver%          
-  #         set QT_INSTALL_DIR=%INSTALL_BASE%\Qt\%_qt_ver%\qt
-  #         set _3rdparty=%INSTALL_BASE%\Qt\%_qt_ver%\3rdParty
+      - name: upload zipped binarires
+        uses:  actions/upload-artifact@v4.4.3
+        with:
+          name: 'ziped-sokit'
+          path: ./sokit_qt-${{ needs.versions_config.outputs.qt-version }}.7z
 
-  #         set _deps_=%CD%\deps
-  #         set MYSQL_DIR=%_deps_%\mysql
-  #         set VULKAN_DIR=%_deps_%\vulkanSDK
-  #         set OPENSSL_DIR=%_3rdparty%\openssl
-  #         set BUILD_DIR=D:\build
-
-  #         set PATH=%CD%\ninja;%PATH%          
-  #         set PATH=%CLANG_INSTALL_DIR%\bin;%PATH%
-  #         @REM mingw 必须放在第一个
-  #         set PATH=%CD%\MinGW\bin;%PATH%
-                                 
-  #         echo ---------------------------Config Qt %_qt_ver%--------------------------------
-  #         cmake -GNinja -Wno-dev -Wno-deprecated-enum-float-conversion  -Wno-deprecated -Wno-comment -Wno-unknown-pragmas^
-  #           -DCMAKE_BUILD_TYPE=Release ^
-  #           -DFEATURE_optimize_full:BOOL=ON ^
-  #           -DFEATURE_optimize_size:BOOL=ON ^
-  #           -DCMAKE_INSTALL_PREFIX=%QT_INSTALL_DIR% ^
-  #           -DFEATURE_sql_mysql:BOOL=ON ^
-  #           -DFEATURE_sql_psql:BOOL=OFF ^
-  #           -DMySQL_INCLUDE_DIR=%MYSQL_DIR%/include ^
-  #           -DOPENSSL_ROOT_DIR=%OPENSSL_DIR% ^
-  #           -DOPENSSL_INCLUDE_DIR=%OPENSSL_DIR%/include ^
-  #           -DOPENSSL_SSL_LIBRARY=%OPENSSL_DIR%/lib64/libssl.a ^
-  #           -DOPENSSL_CRYPTO_LIBRARY=%OPENSSL_DIR%/lib64/libcrypto.a ^
-  #           -DFEATURE_opengl_desktop:BOOL=ON ^
-  #           -DFEATURE_opengl_dynamic:BOOL=ON ^
-  #           -DFEATURE_openssl:BOOL=ON ^
-  #           -DFEATURE_opensslv30:BOOL=ON ^
-  #           -DFEATURE_openssl_runtime:BOOL=ON ^
-  #           -DMySQL_LIBRARY=%MYSQL_DIR%/lib/libmariadb.a ^
-  #           -DFEATURE_qt3d_vulkan:BOOL=ON ^
-  #           -DFEATURE_vulkan:BOOL=ON ^
-  #           -DVulkan_LIBRARY=%VULKAN_DIR%/Lib/vulkan-1.a ^
-  #           -DVulkan_INCLUDE_DIR=%VULKAN_DIR%/Include ^
-  #           -DVulkan_GLSLANG_VALIDATOR_EXECUTABLE=%VULKAN_DIR%/bin/glslangValidator.exe ^
-  #           -DFEATURE_qt3d_rhi_renderer:BOOL=ON ^
-  #           -DVulkan_GLSLC_EXECUTABLE=%VULKAN_DIR%/bin/glslc.exe ^
-  #           -DFEATURE_vkb_lang_ar_AR:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_bg_BG:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_cs_CZ:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_da_DK:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_de_DE:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_el_GR:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_en_GB:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_es_ES:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_es_MX:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_et_EE:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_fa_FA:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_fi_FI:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_fr_CA:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_fr_FR:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_he_IL:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_hi_IN:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_hr_HR:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_hu_HU:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_id_ID:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_it_IT:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_ja_JP:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_ko_KR:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_ms_MY:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_nb_NO:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_nl_NL:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_pl_PL:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_pt_BR:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_pt_PT:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_ro_RO:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_ru_RU:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_sk_SK:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_sl_SI:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_sq_AL:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_sr_SP:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_sv_SE:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_th_TH:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_tr_TR:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_uk_UA:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_vi_VN:BOOL=OFF ^
-  #           -DFEATURE_vkb_lang_zh_TW:BOOL=OFF ^
-  #           -DFEATURE_zhuyin:BOOL=OFF ^
-  #           -DFEATURE_cangjie:BOOL=OFF ^
-  #           -DFEATURE_cxx20:BOOL=ON ^
-  #           -DFEATURE_cxx2a:BOOL=ON ^
-  #           -DBUILD_WITH_PCH:BOOL=ON ^
-  #           -DQT_BUILD_TESTS_BY_DEFAULT:BOOL=OFF ^
-  #           -DQT_BUILD_EXAMPLES_AS_EXTERNAL:BOOL=OFF ^
-  #           -DQT_BUILD_EXAMPLES:BOOL=ON ^
-  #           -DQT_INSTALL_EXAMPLES_SOURCES:BOOL=ON ^
-  #           -DFEATURE_qtwebengine_build:BOOL=OFF ^
-  #           -DFEATURE_qtwebengine_core_build:BOOL=OFF ^
-  #           -DFEATURE_qtwebengine_quick_build:BOOL=OFF ^
-  #           -DQT_FEATURE_qtpdf_build:BOOL=OFF ^
-  #           -DQT_FEATURE_qtpdf_quick_build:BOOL=OFF ^
-  #           -S%_qt_src% ^
-  #           -B%BUILD_DIR%
-
-  #         type %BUILD_DIR%\config.summary
-
-  #         echo ---------------------------build Qt %_qt_ver% --------------------------------
-
-  #         cmake --build %BUILD_DIR% --parallel
-  #         cmake --install %BUILD_DIR% 
-
-  #         copy %BUILD_DIR%\config.summary  %QT_INSTALL_DIR%\..
-
-  #     - name: build qt docs
-  #       shell: cmd
-  #       run: |      
-  #         set mingw=${{ needs.versions_config.outputs.mingw-version }}
-  #         set START=%CD%
-  #         set _qt_ver=${{ needs.versions_config.outputs.qt-version }}
-  #         set _openssl_ver=${{ needs.versions_config.outputs.openssl-version }}
-  #         set INSTALL_BASE=${{ needs.versions_config.outputs.install-prefix }}
-
-  #         set CLANG_INSTALL_DIR=%INSTALL_BASE%\libclang
-          
-  #         set _qt_src=qt-everywhere-src-%_qt_ver%
-  #         set QT_INSTALL_DIR=%INSTALL_BASE%\Qt\%_qt_ver%\qt
-  #         set _3rdparty=%INSTALL_BASE%\Qt\%_qt_ver%\3rdParty
-
-  #         set _deps_=%CD%\deps
-  #         set MYSQL_DIR=%_deps_%\mysql
-  #         set VULKAN_DIR=%_deps_%\vulkanSDK
-  #         set OPENSSL_DIR=%_3rdparty%\openssl
-  #         set BUILD_DIR=D:\build
-          
-  #         set PATH=%CD%\ninja;%PATH%          
-  #         set PATH=%CLANG_INSTALL_DIR%\bin;%PATH%
-  #         @REM mingw 必须放在第一个
-  #         set PATH=%CD%\MinGW\bin;%PATH%          
-
-  #         echo %_qt_src%/qtquick3d/src/3rdparty/openxr/CMakeLists.txt
-  #         type %_qt_src%/qtquick3d/src/3rdparty/openxr/CMakeLists.txt
-
-  #         echo ---------------------------copy  openssl (2) dlls --------------------------------
-  #         copy %OPENSSL_DIR%\bin\libcrypto-3-x64.dll   %QT_INSTALL_DIR%\bin /y
-  #         copy %OPENSSL_DIR%\bin\libssl-3-x64.dll %QT_INSTALL_DIR%\bin /y
-  #         echo ---------------------------copy  libmariadb.dll --------------------------------
-  #         copy %MYSQL_DIR%\lib\libmariadb.dll %QT_INSTALL_DIR%\bin /y
-  #         echo ---------------------------copy  vulkan-1.dll --------------------------------
-  #         copy %VULKAN_DIR%\vulkan-1.dll %QT_INSTALL_DIR%\bin /y
-
-  #         echo ---------------------------build and install docs --------------------------------
-  #         cmake --build %BUILD_DIR% --parallel --target qch_docs 
-  #         cmake --build %BUILD_DIR% --parallel --target install_qch_docs
-  #         echo ---------------------------build qtcharts plugins --------------------------------
-  #         cd %_qt_src%\qtcharts\plugins
-  #         mkdir build & cd build & qmake .. & make release & make install & cd .. & rd /q /s build
-
-  #     # - name: cmd debug 
-  #     #   shell: cmd
-  #     #   run: |     
-  #     #     set mingw=${{ needs.versions_config.outputs.mingw-version }}
-  #     #     set START=%CD%
-  #     #     set _qt_ver=${{ needs.versions_config.outputs.qt-version }}
-  #     #     set _openssl_ver=${{ needs.versions_config.outputs.openssl-version }}
-  #     #     set INSTALL_BASE=${{ needs.versions_config.outputs.install-prefix }}
-          
-  #     #     set test=%INSTALL_BASE%\Qt\%_qt_ver%\test.txt
-  #     #     mkdir %INSTALL_BASE%\Qt\%_qt_ver%
-  #     #     echo qt: %_qt_ver% > %test%
-  #     #     echo openssl: %_openssl_ver% >>%test%
-  #     #     echo install: %INSTALL_BASE%\Qt\%_qt_ver% >>%test%
-
-  #     #     dir %INSTALL_BASE%\Qt
-
-
-  #     - name: post process
-  #       shell: cmd
-  #       run: |     
-  #         set mingw=${{ needs.versions_config.outputs.mingw-version }}
-  #         set START=%CD%
-  #         set _qt_ver=${{ needs.versions_config.outputs.qt-version }}
-  #         set _llvm_ver=${{ needs.versions_config.outputs.llvm-version }}
-  #         set _openssl_ver=${{ needs.versions_config.outputs.openssl-version }}
-  #         set INSTALL_BASE=${{ needs.versions_config.outputs.install-prefix }}
-          
-  #         echo ---------------------------zipped qt %INSTALL_BASE%\Qt\%_qt_ver% --------------------------------
-  #         7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on %_qt_ver%_llvm-%_llvm_ver%_%mingw%.7z %INSTALL_BASE%\Qt\%_qt_ver%
-    
-  #         dir 
-
-  #     - name: upload zipped qt files
-  #       uses:  actions/upload-artifact@v4.4.3
-  #       with:
-  #         name: 'ziped-qt'
-  #         path: ./${{ needs.versions_config.outputs.qt-version }}_llvm-${{ needs.versions_config.outputs.llvm-version }}_${{ needs.versions_config.outputs.mingw-version }}.7z
-
-
-  # release:
-  #   permissions:
-  #     contents: write
+  release:
+    permissions:
+      contents: write
   
-  #   runs-on: ubuntu-latest
-  #   needs:       
-  #     - versions_config
-  #     - build-qt
+    runs-on: ubuntu-latest
+    needs:       
+      - versions_config
+      - build
 
-  #   steps:
-  #   - name: Download openssl
-  #     uses: actions/download-artifact@v4
-  #     with:          
-  #       name: 'ziped-qt'          
-  #       # merge-multiple: true
-  #       path: ./
+    steps:
+    - name: Download 
+      uses: actions/download-artifact@v4
+      with:          
+        name: 'ziped-sokit'          
+        # merge-multiple: true
+        path: ./
 
-  #   - name: Unzip qt
-  #     shell: bash
-  #     run: |
-  #       ls -l   
+    - name: check file
+      shell: bash
+      run: |
+        ls -l
+        
         
 
-  #   - name: Upload to Release
-  #     id: upload_to_release
-  #     uses: softprops/action-gh-release@v2
-  #     with:
-  #       files: "*.7z"
-  #       tag_name: qt-v${{ needs.versions_config.outputs.qt-version }}
+    - name: Upload to Release
+      id: upload_to_release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: "*.7z"
+        tag_name: sokit-release
 
   
