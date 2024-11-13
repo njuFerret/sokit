@@ -157,7 +157,9 @@ jobs:
           cd..
           mkdir %NAME%/platforms
           for /f %%v in (release.txt) do copy .\bin\%%v .\%NAME%\%v /y
-          7z a %NAME%_qt-%_qt_ver%.7z %NAME%
+          dir
+          7z a %NAME%_qt-%_qt_ver%.7z %CD%\%NAME%
+          dir
 
       - name: upload zipped binarires
         uses:  actions/upload-artifact@v4.4.3
