@@ -138,6 +138,7 @@ jobs:
           echo -------------------- test end --------------------------
 
       - name: build and zipped
+        shell: cmd
         run: | 
           set NAME=sokit
           set _qt_ver=${{ needs.versions_config.outputs.qt-version }}
