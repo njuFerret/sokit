@@ -123,7 +123,7 @@ ServerSktTcp::~ServerSktTcp() {
 
 bool ServerSktTcp::open() {
   if (m_server.listen(addr(), port())) {
-    connect(&m_server, SIGNAL(newConnection()), this, SLOT(newConnection()));
+    connect(&m_server, &QTcpServer::newConnection, this, &ServerSktTcp::newConnection);
     return true;
   }
   setError(QString("%1, %2").arg(m_server.serverError()).arg(m_server.errorString()));
@@ -260,10 +260,10 @@ void ServerSktUdp::error() {
 
 bool ServerSktUdp::open() {
   if (m_server.bind(addr(), port(), QUdpSocket::ShareAddress)) {
-    connect(&m_server, SIGNAL(readyRead()), this, SLOT(newData()));
+    connect(&m_server, &QUdpSocket::readyRead, this, &ServerSktUdp::newData);
     // WARNING connect(&m_server, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error()));
     connect(&m_server, &QTcpSocket::errorOccurred, this, &ServerSktUdp::error);
-    connect(&m_timer, SIGNAL(timeout()), this, SLOT(check()));
+    connect(&m_timer, &QTimer::timeout, this, &ServerSktUdp::check);
 
     m_timer.start(2000);
     return true;
