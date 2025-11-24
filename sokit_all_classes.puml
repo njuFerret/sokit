@@ -1,0 +1,217 @@
+@startuml sokit_all_classes
+title sokit 结构图
+skinparam rankdir TB
+
+' 应用入口
+class Sokit {
+  - QMainWindow m_wnd
+  - QTranslator m_trans
+  + Sokit(int &argc, char **argv)
+  + ~Sokit()
+  + bool initUI()
+  + void show()
+  + void close()
+  + void ontop()
+  + void initTranslator()
+  + void initFont()
+  + void initDefaultActionsName()
+}
+
+' UI 层
+class BaseForm {
+  - Ui::BaseForm *m_ui
+  - Logger m_logger
+  - QList<QString> m_connList
+  + bool init()
+  # bool initForm()
+  # bool initHotkeys()
+  # void initConfig()
+  # void saveConfig()
+  # void send(QString data, QString dir)
+  # void kill(QStringList list)
+}
+
+class ServerForm {
+  - ServerSktTcp m_tcp
+  - ServerSktUdp m_udp
+  - Ui::ServerForm m_ui
+  + initConfig()
+  + saveConfig()
+  + initForm()
+  + initHotkeys()
+  + kill(QStringList &list)
+  + trigger(bool start)
+  + send(QString data, QString dir)
+}
+
+class ClientForm {
+  - ClientSktTcp m_tcp
+  - ClientSktUdp m_udp
+  - Ui::ClientForm m_ui
+  + initConfig()
+  + saveConfig()
+  + initForm()
+  + initHotkeys()
+  + connectServer()
+  + disconnectServer()
+  + send()
+}
+
+class TransferForm {
+  - TransferSkt m_trans
+  - Ui::TransferForm m_ui
+  + initConfig()
+  + saveConfig()
+  + initForm()
+  + initHotkeys()
+  + startTransfer()
+  + stopTransfer()
+}
+
+class NotepadForm {
+  - Ui::NotepadForm m_ui
+  - QTextEdit *editor
+  + initForm()
+  + initHotkeys()
+  + saveFile()
+  + openFile()
+}
+
+class HelpForm {
+  - Ui::HelpForm m_ui
+  + exec()
+  + close()
+}
+
+' 网络层
+class ClientSkt {
+  - QHostAddress m_ip
+  - quint16 m_port
+  - QString m_error
+  + plug(QHostAddress ip, quint16 port)
+  + unplug()
+  + setError(QString err)
+  + recordRecv(qint32 bytes)
+  + recordSend(qint32 bytes)
+  + send(QString data)
+  + dump(char* buf, qint32 len, bool isSend)
+  + show(QString msg)
+}
+
+class ClientSktTcp {
+  - QTcpSocket m_socket
+  + open()
+  + close()
+  + error()
+  + asynConn()
+  + closed()
+  + newData()
+  + send(QByteArray bin)
+}
+
+class ClientSktUdp {
+  - QUdpSocket m_socket
+  + open()
+  + close()
+  + error()
+  + asynConn()
+  + closed()
+  + newData()
+  + send(QByteArray bin)
+}
+
+class ServerSkt {
+  - QHostAddress m_ip
+  - quint16 m_port
+  - QString m_error
+  + bind(QHostAddress ip, quint16 port)
+  + unbind()
+  + setError(QString err)
+  + recordRecv(qint32 bytes)
+  + recordSend(qint32 bytes)
+  + dump(char* buf, qint32 len, bool isSend)
+  + show(QString msg)
+}
+
+class ServerSktTcp {
+  - QTcpServer m_server
+  - QList<QTcpSocket*> m_clients
+  + open()
+  + close()
+  + newConn()
+  + closed()
+  + error()
+  + newData()
+  + send(QByteArray bin)
+}
+
+class ServerSktUdp {
+  - QUdpSocket m_socket
+  + open()
+  + close()
+  + error()
+  + newData()
+  + send(QByteArray bin)
+}
+
+class TransferSkt {
+  - QTcpSocket m_socket
+  - QFile m_file
+  + open()
+  + close()
+  + sendFile(QString path)
+  + recvFile(QString path)
+}
+
+' 工具类
+class Setting {
+  + static load(...)
+  + static save(...)
+  + static get(...)
+  + static set(...)
+}
+
+class Toolkit {
+  + static initNetworkInterfaces(...)
+  + static popIPAddr(...)
+  + static pushIPAddr(...)
+  + static resetPushBox(...)
+}
+
+class Logger {
+  + initLogger(...)
+  + output(...)
+}
+
+' 继承关系
+ServerForm -|> BaseForm
+ClientForm -|> BaseForm
+TransferForm -|> BaseForm
+NotepadForm -|> BaseForm
+HelpForm -|> QDialog
+
+ClientSktTcp -|> ClientSkt
+ClientSktUdp -|> ClientSkt
+ServerSktTcp -|> ServerSkt
+ServerSktUdp -|> ServerSkt
+
+' 组合关系
+Sokit o-- QMainWindow
+Sokit o-- QTranslator
+Sokit o-- QTabWidget
+Sokit ..> Setting
+Sokit ..> Toolkit
+Sokit ..> Logger
+
+QTabWidget o-- ServerForm
+QTabWidget o-- ClientForm
+QTabWidget o-- TransferForm
+QTabWidget o-- NotepadForm
+
+ServerForm o-- ServerSktTcp
+ServerForm o-- ServerSktUdp
+ClientForm o-- ClientSktTcp
+ClientForm o-- ClientSktUdp
+TransferForm o-- TransferSkt
+
+@enduml

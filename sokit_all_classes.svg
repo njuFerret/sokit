@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1113px" preserveAspectRatio="none" style="width:1682px;height:1113px;background:#FFFFFF;" version="1.1" viewBox="0 0 1682 1113" width="1682px" zoomAndPan="magnify">
+  <defs/>
+  <g>
+    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="80" x="794.25" y="26.0439">sokit &#32467;&#26500;&#22270;</text>
+    <!--class Sokit-->
+    <g id="elem_Sokit">
+      <rect codeLine="5" fill="#F1F1F1" height="258.3213" id="Sokit" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="211" x="488" y="47.1201"/>
+      <ellipse cx="573.75" cy="63.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M573.1719,68.9795 Q571.1406,68.9795 569.9531,67.4795 Q568.7813,65.9795 568.7813,62.8701 Q568.7813,60.2295 570.0313,58.4639 Q571.2813,56.6826 573.4375,56.6826 Q573.9531,56.6826 574.4844,56.8232 Q574.9219,57.0107 575.1719,57.0107 Q575.3594,57.0107 575.4531,56.9795 Q575.5469,56.9326 576.0938,56.2139 L576.9063,60.1826 L575.8594,60.4951 Q575.4063,58.9951 574.8125,58.417 Q574.2344,57.8232 573.3125,57.8232 Q572.1406,57.8232 571.4375,59.2295 Q570.7344,60.6201 570.7344,62.792 Q570.7344,65.1826 571.3281,66.4482 Q571.9375,67.6982 573.25,67.6982 Q574.1719,67.6982 574.8438,67.0264 Q575.5156,66.3389 575.8438,64.7607 L576.8906,65.2607 Q576.4844,67.0264 575.5,68.0107 Q574.5156,68.9795 573.1719,68.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="594.25" y="69.604">Sokit</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="489" x2="698" y1="79.1201" y2="79.1201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="496" y="91.1802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="508" y="99.1641">QMainWindow m_wnd</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="496" y="110.3003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="508" y="118.2842">QTranslator m_trans</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="489" x2="698" y1="125.3604" y2="125.3604"/>
+      <ellipse cx="499" cy="140.4204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="508" y="145.4043">Sokit(int &amp;argc, char **argv)</text>
+      <ellipse cx="499" cy="159.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="508" y="164.5244">~Sokit()</text>
+      <ellipse cx="499" cy="178.6606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="508" y="183.6445">bool initUI()</text>
+      <ellipse cx="499" cy="197.7808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="508" y="202.7646">void show()</text>
+      <ellipse cx="499" cy="216.9009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="508" y="221.8848">void close()</text>
+      <ellipse cx="499" cy="236.021" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="508" y="241.0049">void ontop()</text>
+      <ellipse cx="499" cy="255.1411" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="508" y="260.125">void initTranslator()</text>
+      <ellipse cx="499" cy="274.2612" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="508" y="279.2451">void initFont()</text>
+      <ellipse cx="499" cy="293.3813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185" x="508" y="298.3652">void initDefaultActionsName()</text>
+    </g>
+    <!--class BaseForm-->
+    <g id="elem_BaseForm">
+      <rect codeLine="20" fill="#F1F1F1" height="239.2012" id="BaseForm" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="253" x="1383" y="549.1201"/>
+      <ellipse cx="1472.75" cy="565.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M1472.1719,570.9795 Q1470.1406,570.9795 1468.9531,569.4795 Q1467.7813,567.9795 1467.7813,564.8701 Q1467.7813,562.2295 1469.0313,560.4639 Q1470.2813,558.6826 1472.4375,558.6826 Q1472.9531,558.6826 1473.4844,558.8232 Q1473.9219,559.0107 1474.1719,559.0107 Q1474.3594,559.0107 1474.4531,558.9795 Q1474.5469,558.9326 1475.0938,558.2139 L1475.9063,562.1826 L1474.8594,562.4951 Q1474.4063,560.9951 1473.8125,560.417 Q1473.2344,559.8232 1472.3125,559.8232 Q1471.1406,559.8232 1470.4375,561.2295 Q1469.7344,562.6201 1469.7344,564.792 Q1469.7344,567.1826 1470.3281,568.4482 Q1470.9375,569.6982 1472.25,569.6982 Q1473.1719,569.6982 1473.8438,569.0264 Q1474.5156,568.3389 1474.8438,566.7607 L1475.8906,567.2607 Q1475.4844,569.0264 1474.5,570.0107 Q1473.5156,570.9795 1472.1719,570.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="1493.25" y="571.604">BaseForm</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="1384" x2="1635" y1="581.1201" y2="581.1201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1391" y="593.1802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="1403" y="601.1641">Ui::BaseForm *m_ui</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1391" y="612.3003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="1403" y="620.2842">Logger m_logger</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1391" y="631.4204"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="173" x="1403" y="639.4043">QList&lt;QString&gt; m_connList</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="1384" x2="1635" y1="646.4805" y2="646.4805"/>
+      <ellipse cx="1394" cy="661.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="1403" y="666.5244">bool init()</text>
+      <polygon fill="#FFFF44" points="1394,675.6606,1398,679.6606,1394,683.6606,1390,679.6606" style="stroke:#B38D22;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="1403" y="685.6445">bool initForm()</text>
+      <polygon fill="#FFFF44" points="1394,694.7808,1398,698.7808,1394,702.7808,1390,698.7808" style="stroke:#B38D22;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="1403" y="704.7646">bool initHotkeys()</text>
+      <polygon fill="#FFFF44" points="1394,713.9009,1398,717.9009,1394,721.9009,1390,717.9009" style="stroke:#B38D22;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="1403" y="723.8848">void initConfig()</text>
+      <polygon fill="#FFFF44" points="1394,733.021,1398,737.021,1394,741.021,1390,737.021" style="stroke:#B38D22;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="1403" y="743.0049">void saveConfig()</text>
+      <polygon fill="#FFFF44" points="1394,752.1411,1398,756.1411,1394,760.1411,1390,756.1411" style="stroke:#B38D22;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="227" x="1403" y="762.125">void send(QString data, QString dir)</text>
+      <polygon fill="#FFFF44" points="1394,771.2612,1398,775.2612,1394,779.2612,1390,775.2612" style="stroke:#B38D22;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="1403" y="781.2451">void kill(QStringList list)</text>
+    </g>
+    <!--class ServerForm-->
+    <g id="elem_ServerForm">
+      <rect codeLine="33" fill="#F1F1F1" height="239.2012" id="ServerForm" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="223" x="384" y="549.1201"/>
+      <ellipse cx="453.75" cy="565.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M453.1719,570.9795 Q451.1406,570.9795 449.9531,569.4795 Q448.7813,567.9795 448.7813,564.8701 Q448.7813,562.2295 450.0313,560.4639 Q451.2813,558.6826 453.4375,558.6826 Q453.9531,558.6826 454.4844,558.8232 Q454.9219,559.0107 455.1719,559.0107 Q455.3594,559.0107 455.4531,558.9795 Q455.5469,558.9326 456.0938,558.2139 L456.9063,562.1826 L455.8594,562.4951 Q455.4063,560.9951 454.8125,560.417 Q454.2344,559.8232 453.3125,559.8232 Q452.1406,559.8232 451.4375,561.2295 Q450.7344,562.6201 450.7344,564.792 Q450.7344,567.1826 451.3281,568.4482 Q451.9375,569.6982 453.25,569.6982 Q454.1719,569.6982 454.8438,569.0264 Q455.5156,568.3389 455.8438,566.7607 L456.8906,567.2607 Q456.4844,569.0264 455.5,570.0107 Q454.5156,570.9795 453.1719,570.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="474.25" y="571.604">ServerForm</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="385" x2="606" y1="581.1201" y2="581.1201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="392" y="593.1802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="404" y="601.1641">ServerSktTcp m_tcp</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="392" y="612.3003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134" x="404" y="620.2842">ServerSktUdp m_udp</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="392" y="631.4204"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="404" y="639.4043">Ui::ServerForm m_ui</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="385" x2="606" y1="646.4805" y2="646.4805"/>
+      <ellipse cx="395" cy="661.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="404" y="666.5244">initConfig()</text>
+      <ellipse cx="395" cy="680.6606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="404" y="685.6445">saveConfig()</text>
+      <ellipse cx="395" cy="699.7808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="404" y="704.7646">initForm()</text>
+      <ellipse cx="395" cy="718.9009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="404" y="723.8848">initHotkeys()</text>
+      <ellipse cx="395" cy="738.021" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="404" y="743.0049">kill(QStringList &amp;list)</text>
+      <ellipse cx="395" cy="757.1411" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="404" y="762.125">trigger(bool start)</text>
+      <ellipse cx="395" cy="776.2612" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="197" x="404" y="781.2451">send(QString data, QString dir)</text>
+    </g>
+    <!--class ClientForm-->
+    <g id="elem_ClientForm">
+      <rect codeLine="46" fill="#F1F1F1" height="239.2012" id="ClientForm" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="154" x="789.5" y="549.1201"/>
+      <ellipse cx="828.35" cy="565.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M827.7719,570.9795 Q825.7406,570.9795 824.5531,569.4795 Q823.3813,567.9795 823.3813,564.8701 Q823.3813,562.2295 824.6313,560.4639 Q825.8813,558.6826 828.0375,558.6826 Q828.5531,558.6826 829.0844,558.8232 Q829.5219,559.0107 829.7719,559.0107 Q829.9594,559.0107 830.0531,558.9795 Q830.1469,558.9326 830.6938,558.2139 L831.5063,562.1826 L830.4594,562.4951 Q830.0063,560.9951 829.4125,560.417 Q828.8344,559.8232 827.9125,559.8232 Q826.7406,559.8232 826.0375,561.2295 Q825.3344,562.6201 825.3344,564.792 Q825.3344,567.1826 825.9281,568.4482 Q826.5375,569.6982 827.85,569.6982 Q828.7719,569.6982 829.4438,569.0264 Q830.1156,568.3389 830.4438,566.7607 L831.4906,567.2607 Q831.0844,569.0264 830.1,570.0107 Q829.1156,570.9795 827.7719,570.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="847.65" y="571.604">ClientForm</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="790.5" x2="942.5" y1="581.1201" y2="581.1201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="797.5" y="593.1802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="809.5" y="601.1641">ClientSktTcp m_tcp</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="797.5" y="612.3003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="809.5" y="620.2842">ClientSktUdp m_udp</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="797.5" y="631.4204"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="809.5" y="639.4043">Ui::ClientForm m_ui</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="790.5" x2="942.5" y1="646.4805" y2="646.4805"/>
+      <ellipse cx="800.5" cy="661.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="809.5" y="666.5244">initConfig()</text>
+      <ellipse cx="800.5" cy="680.6606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="809.5" y="685.6445">saveConfig()</text>
+      <ellipse cx="800.5" cy="699.7808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="809.5" y="704.7646">initForm()</text>
+      <ellipse cx="800.5" cy="718.9009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="809.5" y="723.8848">initHotkeys()</text>
+      <ellipse cx="800.5" cy="738.021" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="809.5" y="743.0049">connectServer()</text>
+      <ellipse cx="800.5" cy="757.1411" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="809.5" y="762.125">disconnectServer()</text>
+      <ellipse cx="800.5" cy="776.2612" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="809.5" y="781.2451">send()</text>
+    </g>
+    <!--class TransferForm-->
+    <g id="elem_TransferForm">
+      <rect codeLine="59" fill="#F1F1F1" height="200.9609" id="TransferForm" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="167" x="979" y="568.1201"/>
+      <ellipse cx="1015.6" cy="584.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M1015.0219,589.9795 Q1012.9906,589.9795 1011.8031,588.4795 Q1010.6313,586.9795 1010.6313,583.8701 Q1010.6313,581.2295 1011.8813,579.4639 Q1013.1313,577.6826 1015.2875,577.6826 Q1015.8031,577.6826 1016.3344,577.8232 Q1016.7719,578.0107 1017.0219,578.0107 Q1017.2094,578.0107 1017.3031,577.9795 Q1017.3969,577.9326 1017.9438,577.2139 L1018.7563,581.1826 L1017.7094,581.4951 Q1017.2563,579.9951 1016.6625,579.417 Q1016.0844,578.8232 1015.1625,578.8232 Q1013.9906,578.8232 1013.2875,580.2295 Q1012.5844,581.6201 1012.5844,583.792 Q1012.5844,586.1826 1013.1781,587.4482 Q1013.7875,588.6982 1015.1,588.6982 Q1016.0219,588.6982 1016.6938,588.0264 Q1017.3656,587.3389 1017.6938,585.7607 L1018.7406,586.2607 Q1018.3344,588.0264 1017.35,589.0107 Q1016.3656,589.9795 1015.0219,589.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="1034.4" y="590.604">TransferForm</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="980" x2="1145" y1="600.1201" y2="600.1201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="987" y="612.1802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="999" y="620.1641">TransferSkt m_trans</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="987" y="631.3003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="999" y="639.2842">Ui::TransferForm m_ui</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="980" x2="1145" y1="646.3604" y2="646.3604"/>
+      <ellipse cx="990" cy="661.4204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="999" y="666.4043">initConfig()</text>
+      <ellipse cx="990" cy="680.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="999" y="685.5244">saveConfig()</text>
+      <ellipse cx="990" cy="699.6606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="999" y="704.6445">initForm()</text>
+      <ellipse cx="990" cy="718.7808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="999" y="723.7646">initHotkeys()</text>
+      <ellipse cx="990" cy="737.9009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="999" y="742.8848">startTransfer()</text>
+      <ellipse cx="990" cy="757.021" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="999" y="762.0049">stopTransfer()</text>
+    </g>
+    <!--class NotepadForm-->
+    <g id="elem_NotepadForm">
+      <rect codeLine="70" fill="#F1F1F1" height="162.7207" id="NotepadForm" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="166" x="1181.5" y="587.1201"/>
+      <ellipse cx="1218.1" cy="603.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M1217.5219,608.9795 Q1215.4906,608.9795 1214.3031,607.4795 Q1213.1313,605.9795 1213.1313,602.8701 Q1213.1313,600.2295 1214.3813,598.4639 Q1215.6313,596.6826 1217.7875,596.6826 Q1218.3031,596.6826 1218.8344,596.8232 Q1219.2719,597.0107 1219.5219,597.0107 Q1219.7094,597.0107 1219.8031,596.9795 Q1219.8969,596.9326 1220.4438,596.2139 L1221.2563,600.1826 L1220.2094,600.4951 Q1219.7563,598.9951 1219.1625,598.417 Q1218.5844,597.8232 1217.6625,597.8232 Q1216.4906,597.8232 1215.7875,599.2295 Q1215.0844,600.6201 1215.0844,602.792 Q1215.0844,605.1826 1215.6781,606.4482 Q1216.2875,607.6982 1217.6,607.6982 Q1218.5219,607.6982 1219.1938,607.0264 Q1219.8656,606.3389 1220.1938,604.7607 L1221.2406,605.2607 Q1220.8344,607.0264 1219.85,608.0107 Q1218.8656,608.9795 1217.5219,608.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="1236.9" y="609.604">NotepadForm</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="1182.5" x2="1346.5" y1="619.1201" y2="619.1201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1189.5" y="631.1802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="1201.5" y="639.1641">Ui::NotepadForm m_ui</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1189.5" y="650.3003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="1201.5" y="658.2842">QTextEdit *editor</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="1182.5" x2="1346.5" y1="665.3604" y2="665.3604"/>
+      <ellipse cx="1192.5" cy="680.4204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="1201.5" y="685.4043">initForm()</text>
+      <ellipse cx="1192.5" cy="699.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="1201.5" y="704.5244">initHotkeys()</text>
+      <ellipse cx="1192.5" cy="718.6606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="1201.5" y="723.6445">saveFile()</text>
+      <ellipse cx="1192.5" cy="737.7808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="1201.5" y="742.7646">openFile()</text>
+    </g>
+    <!--class HelpForm-->
+    <g id="elem_HelpForm">
+      <rect codeLine="79" fill="#F1F1F1" height="105.3604" id="HelpForm" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="141" x="734" y="123.6201"/>
+      <ellipse cx="770.6" cy="139.6201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M770.0219,145.4795 Q767.9906,145.4795 766.8031,143.9795 Q765.6313,142.4795 765.6313,139.3701 Q765.6313,136.7295 766.8813,134.9639 Q768.1313,133.1826 770.2875,133.1826 Q770.8031,133.1826 771.3344,133.3232 Q771.7719,133.5107 772.0219,133.5107 Q772.2094,133.5107 772.3031,133.4795 Q772.3969,133.4326 772.9438,132.7139 L773.7563,136.6826 L772.7094,136.9951 Q772.2563,135.4951 771.6625,134.917 Q771.0844,134.3232 770.1625,134.3232 Q768.9906,134.3232 768.2875,135.7295 Q767.5844,137.1201 767.5844,139.292 Q767.5844,141.6826 768.1781,142.9482 Q768.7875,144.1982 770.1,144.1982 Q771.0219,144.1982 771.6938,143.5264 Q772.3656,142.8389 772.6938,141.2607 L773.7406,141.7607 Q773.3344,143.5264 772.35,144.5107 Q771.3656,145.4795 770.0219,145.4795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="789.4" y="146.104">HelpForm</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="735" x2="874" y1="155.6201" y2="155.6201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="742" y="167.6802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="754" y="175.6641">Ui::HelpForm m_ui</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="735" x2="874" y1="182.7402" y2="182.7402"/>
+      <ellipse cx="745" cy="197.8003" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="754" y="202.7842">exec()</text>
+      <ellipse cx="745" cy="216.9204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="754" y="221.9043">close()</text>
+    </g>
+    <!--class ClientSkt-->
+    <g id="elem_ClientSkt">
+      <rect codeLine="86" fill="#F1F1F1" height="258.3213" id="ClientSkt" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="280" x="1190.5" y="848.1201"/>
+      <ellipse cx="1298.25" cy="864.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M1297.6719,869.9795 Q1295.6406,869.9795 1294.4531,868.4795 Q1293.2813,866.9795 1293.2813,863.8701 Q1293.2813,861.2295 1294.5313,859.4639 Q1295.7813,857.6826 1297.9375,857.6826 Q1298.4531,857.6826 1298.9844,857.8232 Q1299.4219,858.0107 1299.6719,858.0107 Q1299.8594,858.0107 1299.9531,857.9795 Q1300.0469,857.9326 1300.5938,857.2139 L1301.4063,861.1826 L1300.3594,861.4951 Q1299.9063,859.9951 1299.3125,859.417 Q1298.7344,858.8232 1297.8125,858.8232 Q1296.6406,858.8232 1295.9375,860.2295 Q1295.2344,861.6201 1295.2344,863.792 Q1295.2344,866.1826 1295.8281,867.4482 Q1296.4375,868.6982 1297.75,868.6982 Q1298.6719,868.6982 1299.3438,868.0264 Q1300.0156,867.3389 1300.3438,865.7607 L1301.3906,866.2607 Q1300.9844,868.0264 1300,869.0107 Q1299.0156,869.9795 1297.6719,869.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1318.75" y="870.604">ClientSkt</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="1191.5" x2="1469.5" y1="880.1201" y2="880.1201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1198.5" y="892.1802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="1210.5" y="900.1641">QHostAddress m_ip</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1198.5" y="911.3003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="1210.5" y="919.2842">quint16 m_port</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1198.5" y="930.4204"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="1210.5" y="938.4043">QString m_error</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="1191.5" x2="1469.5" y1="945.4805" y2="945.4805"/>
+      <ellipse cx="1201.5" cy="960.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="227" x="1210.5" y="965.5244">plug(QHostAddress ip, quint16 port)</text>
+      <ellipse cx="1201.5" cy="979.6606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="1210.5" y="984.6445">unplug()</text>
+      <ellipse cx="1201.5" cy="998.7808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="1210.5" y="1003.7646">setError(QString err)</text>
+      <ellipse cx="1201.5" cy="1017.9009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="1210.5" y="1022.8848">recordRecv(qint32 bytes)</text>
+      <ellipse cx="1201.5" cy="1037.021" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="1210.5" y="1042.0049">recordSend(qint32 bytes)</text>
+      <ellipse cx="1201.5" cy="1056.1411" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="1210.5" y="1061.125">send(QString data)</text>
+      <ellipse cx="1201.5" cy="1075.2612" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="254" x="1210.5" y="1080.2451">dump(char* buf, qint32 len, bool isSend)</text>
+      <ellipse cx="1201.5" cy="1094.3813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="1210.5" y="1099.3652">show(QString msg)</text>
+    </g>
+    <!--class ClientSktTcp-->
+    <g id="elem_ClientSktTcp">
+      <rect codeLine="100" fill="#F1F1F1" height="200.9609" id="ClientSktTcp" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="168" x="782.5" y="876.6201"/>
+      <ellipse cx="822.7" cy="892.6201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M822.1219,898.4795 Q820.0906,898.4795 818.9031,896.9795 Q817.7313,895.4795 817.7313,892.3701 Q817.7313,889.7295 818.9813,887.9639 Q820.2313,886.1826 822.3875,886.1826 Q822.9031,886.1826 823.4344,886.3232 Q823.8719,886.5107 824.1219,886.5107 Q824.3094,886.5107 824.4031,886.4795 Q824.4969,886.4326 825.0438,885.7139 L825.8563,889.6826 L824.8094,889.9951 Q824.3563,888.4951 823.7625,887.917 Q823.1844,887.3232 822.2625,887.3232 Q821.0906,887.3232 820.3875,888.7295 Q819.6844,890.1201 819.6844,892.292 Q819.6844,894.6826 820.2781,895.9482 Q820.8875,897.1982 822.2,897.1982 Q823.1219,897.1982 823.7938,896.5264 Q824.4656,895.8389 824.7938,894.2607 L825.8406,894.7607 Q825.4344,896.5264 824.45,897.5107 Q823.4656,898.4795 822.1219,898.4795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="842.3" y="899.104">ClientSktTcp</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="783.5" x2="949.5" y1="908.6201" y2="908.6201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="790.5" y="920.6802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="802.5" y="928.6641">QTcpSocket m_socket</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="783.5" x2="949.5" y1="935.7402" y2="935.7402"/>
+      <ellipse cx="793.5" cy="950.8003" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="802.5" y="955.7842">open()</text>
+      <ellipse cx="793.5" cy="969.9204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="802.5" y="974.9043">close()</text>
+      <ellipse cx="793.5" cy="989.0405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="802.5" y="994.0244">error()</text>
+      <ellipse cx="793.5" cy="1008.1606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="802.5" y="1013.1445">asynConn()</text>
+      <ellipse cx="793.5" cy="1027.2808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="802.5" y="1032.2646">closed()</text>
+      <ellipse cx="793.5" cy="1046.4009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="802.5" y="1051.3848">newData()</text>
+      <ellipse cx="793.5" cy="1065.521" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="802.5" y="1070.5049">send(QByteArray bin)</text>
+    </g>
+    <!--class ClientSktUdp-->
+    <g id="elem_ClientSktUdp">
+      <rect codeLine="111" fill="#F1F1F1" height="200.9609" id="ClientSktUdp" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="169" x="986" y="876.6201"/>
+      <ellipse cx="1026.2" cy="892.6201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M1025.6219,898.4795 Q1023.5906,898.4795 1022.4031,896.9795 Q1021.2313,895.4795 1021.2313,892.3701 Q1021.2313,889.7295 1022.4813,887.9639 Q1023.7313,886.1826 1025.8875,886.1826 Q1026.4031,886.1826 1026.9344,886.3232 Q1027.3719,886.5107 1027.6219,886.5107 Q1027.8094,886.5107 1027.9031,886.4795 Q1027.9969,886.4326 1028.5438,885.7139 L1029.3563,889.6826 L1028.3094,889.9951 Q1027.8563,888.4951 1027.2625,887.917 Q1026.6844,887.3232 1025.7625,887.3232 Q1024.5906,887.3232 1023.8875,888.7295 Q1023.1844,890.1201 1023.1844,892.292 Q1023.1844,894.6826 1023.7781,895.9482 Q1024.3875,897.1982 1025.7,897.1982 Q1026.6219,897.1982 1027.2938,896.5264 Q1027.9656,895.8389 1028.2938,894.2607 L1029.3406,894.7607 Q1028.9344,896.5264 1027.95,897.5107 Q1026.9656,898.4795 1025.6219,898.4795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="1045.8" y="899.104">ClientSktUdp</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="987" x2="1154" y1="908.6201" y2="908.6201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="994" y="920.6802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="1006" y="928.6641">QUdpSocket m_socket</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="987" x2="1154" y1="935.7402" y2="935.7402"/>
+      <ellipse cx="997" cy="950.8003" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1006" y="955.7842">open()</text>
+      <ellipse cx="997" cy="969.9204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="1006" y="974.9043">close()</text>
+      <ellipse cx="997" cy="989.0405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="1006" y="994.0244">error()</text>
+      <ellipse cx="997" cy="1008.1606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="1006" y="1013.1445">asynConn()</text>
+      <ellipse cx="997" cy="1027.2808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="1006" y="1032.2646">closed()</text>
+      <ellipse cx="997" cy="1046.4009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="1006" y="1051.3848">newData()</text>
+      <ellipse cx="997" cy="1065.521" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="1006" y="1070.5049">send(QByteArray bin)</text>
+    </g>
+    <!--class ServerSkt-->
+    <g id="elem_ServerSkt">
+      <rect codeLine="122" fill="#F1F1F1" height="239.2012" id="ServerSkt" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="280" x="467.5" y="857.6201"/>
+      <ellipse cx="572.25" cy="873.6201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M571.6719,879.4795 Q569.6406,879.4795 568.4531,877.9795 Q567.2813,876.4795 567.2813,873.3701 Q567.2813,870.7295 568.5313,868.9639 Q569.7813,867.1826 571.9375,867.1826 Q572.4531,867.1826 572.9844,867.3232 Q573.4219,867.5107 573.6719,867.5107 Q573.8594,867.5107 573.9531,867.4795 Q574.0469,867.4326 574.5938,866.7139 L575.4063,870.6826 L574.3594,870.9951 Q573.9063,869.4951 573.3125,868.917 Q572.7344,868.3232 571.8125,868.3232 Q570.6406,868.3232 569.9375,869.7295 Q569.2344,871.1201 569.2344,873.292 Q569.2344,875.6826 569.8281,876.9482 Q570.4375,878.1982 571.75,878.1982 Q572.6719,878.1982 573.3438,877.5264 Q574.0156,876.8389 574.3438,875.2607 L575.3906,875.7607 Q574.9844,877.5264 574,878.5107 Q573.0156,879.4795 571.6719,879.4795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="592.75" y="880.104">ServerSkt</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="468.5" x2="746.5" y1="889.6201" y2="889.6201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="475.5" y="901.6802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="487.5" y="909.6641">QHostAddress m_ip</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="475.5" y="920.8003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="487.5" y="928.7842">quint16 m_port</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="475.5" y="939.9204"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="487.5" y="947.9043">QString m_error</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="468.5" x2="746.5" y1="954.9805" y2="954.9805"/>
+      <ellipse cx="478.5" cy="970.0405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="227" x="487.5" y="975.0244">bind(QHostAddress ip, quint16 port)</text>
+      <ellipse cx="478.5" cy="989.1606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="487.5" y="994.1445">unbind()</text>
+      <ellipse cx="478.5" cy="1008.2808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="487.5" y="1013.2646">setError(QString err)</text>
+      <ellipse cx="478.5" cy="1027.4009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="487.5" y="1032.3848">recordRecv(qint32 bytes)</text>
+      <ellipse cx="478.5" cy="1046.521" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="487.5" y="1051.5049">recordSend(qint32 bytes)</text>
+      <ellipse cx="478.5" cy="1065.6411" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="254" x="487.5" y="1070.625">dump(char* buf, qint32 len, bool isSend)</text>
+      <ellipse cx="478.5" cy="1084.7612" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="487.5" y="1089.7451">show(QString msg)</text>
+    </g>
+    <!--class ServerSktTcp-->
+    <g id="elem_ServerSktTcp">
+      <rect codeLine="135" fill="#F1F1F1" height="220.0811" id="ServerSktTcp" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="221" x="7" y="867.1201"/>
+      <ellipse cx="70.25" cy="883.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M69.6719,888.9795 Q67.6406,888.9795 66.4531,887.4795 Q65.2813,885.9795 65.2813,882.8701 Q65.2813,880.2295 66.5313,878.4639 Q67.7813,876.6826 69.9375,876.6826 Q70.4531,876.6826 70.9844,876.8232 Q71.4219,877.0107 71.6719,877.0107 Q71.8594,877.0107 71.9531,876.9795 Q72.0469,876.9326 72.5938,876.2139 L73.4063,880.1826 L72.3594,880.4951 Q71.9063,878.9951 71.3125,878.417 Q70.7344,877.8232 69.8125,877.8232 Q68.6406,877.8232 67.9375,879.2295 Q67.2344,880.6201 67.2344,882.792 Q67.2344,885.1826 67.8281,886.4482 Q68.4375,887.6982 69.75,887.6982 Q70.6719,887.6982 71.3438,887.0264 Q72.0156,886.3389 72.3438,884.7607 L73.3906,885.2607 Q72.9844,887.0264 72,888.0107 Q71.0156,888.9795 69.6719,888.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="90.75" y="889.604">ServerSktTcp</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="227" y1="899.1201" y2="899.1201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="911.1802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="27" y="919.1641">QTcpServer m_server</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="930.3003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="27" y="938.2842">QList&lt;QTcpSocket*&gt; m_clients</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="227" y1="945.3604" y2="945.3604"/>
+      <ellipse cx="18" cy="960.4204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="27" y="965.4043">open()</text>
+      <ellipse cx="18" cy="979.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="27" y="984.5244">close()</text>
+      <ellipse cx="18" cy="998.6606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="27" y="1003.6445">newConn()</text>
+      <ellipse cx="18" cy="1017.7808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="27" y="1022.7646">closed()</text>
+      <ellipse cx="18" cy="1036.9009" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="27" y="1041.8848">error()</text>
+      <ellipse cx="18" cy="1056.021" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="27" y="1061.0049">newData()</text>
+      <ellipse cx="18" cy="1075.1411" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="27" y="1080.125">send(QByteArray bin)</text>
+    </g>
+    <!--class ServerSktUdp-->
+    <g id="elem_ServerSktUdp">
+      <rect codeLine="147" fill="#F1F1F1" height="162.7207" id="ServerSktUdp" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="169" x="263" y="895.6201"/>
+      <ellipse cx="300.5" cy="911.6201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M299.9219,917.4795 Q297.8906,917.4795 296.7031,915.9795 Q295.5313,914.4795 295.5313,911.3701 Q295.5313,908.7295 296.7813,906.9639 Q298.0313,905.1826 300.1875,905.1826 Q300.7031,905.1826 301.2344,905.3232 Q301.6719,905.5107 301.9219,905.5107 Q302.1094,905.5107 302.2031,905.4795 Q302.2969,905.4326 302.8438,904.7139 L303.6563,908.6826 L302.6094,908.9951 Q302.1563,907.4951 301.5625,906.917 Q300.9844,906.3232 300.0625,906.3232 Q298.8906,906.3232 298.1875,907.7295 Q297.4844,909.1201 297.4844,911.292 Q297.4844,913.6826 298.0781,914.9482 Q298.6875,916.1982 300,916.1982 Q300.9219,916.1982 301.5938,915.5264 Q302.2656,914.8389 302.5938,913.2607 L303.6406,913.7607 Q303.2344,915.5264 302.25,916.5107 Q301.2656,917.4795 299.9219,917.4795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="319.5" y="918.104">ServerSktUdp</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="264" x2="431" y1="927.6201" y2="927.6201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="271" y="939.6802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="283" y="947.6641">QUdpSocket m_socket</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="264" x2="431" y1="954.7402" y2="954.7402"/>
+      <ellipse cx="274" cy="969.8003" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="283" y="974.7842">open()</text>
+      <ellipse cx="274" cy="988.9204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="283" y="993.9043">close()</text>
+      <ellipse cx="274" cy="1008.0405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="283" y="1013.0244">error()</text>
+      <ellipse cx="274" cy="1027.1606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="283" y="1032.1445">newData()</text>
+      <ellipse cx="274" cy="1046.2808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="283" y="1051.2646">send(QByteArray bin)</text>
+    </g>
+    <!--class TransferSkt-->
+    <g id="elem_TransferSkt">
+      <rect codeLine="156" fill="#F1F1F1" height="162.7207" id="TransferSkt" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="170" x="1505.5" y="895.6201"/>
+      <ellipse cx="1549.3" cy="911.6201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M1548.7219,917.4795 Q1546.6906,917.4795 1545.5031,915.9795 Q1544.3313,914.4795 1544.3313,911.3701 Q1544.3313,908.7295 1545.5813,906.9639 Q1546.8313,905.1826 1548.9875,905.1826 Q1549.5031,905.1826 1550.0344,905.3232 Q1550.4719,905.5107 1550.7219,905.5107 Q1550.9094,905.5107 1551.0031,905.4795 Q1551.0969,905.4326 1551.6438,904.7139 L1552.4563,908.6826 L1551.4094,908.9951 Q1550.9563,907.4951 1550.3625,906.917 Q1549.7844,906.3232 1548.8625,906.3232 Q1547.6906,906.3232 1546.9875,907.7295 Q1546.2844,909.1201 1546.2844,911.292 Q1546.2844,913.6826 1546.8781,914.9482 Q1547.4875,916.1982 1548.8,916.1982 Q1549.7219,916.1982 1550.3938,915.5264 Q1551.0656,914.8389 1551.3938,913.2607 L1552.4406,913.7607 Q1552.0344,915.5264 1551.05,916.5107 Q1550.0656,917.4795 1548.7219,917.4795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="1569.7" y="918.104">TransferSkt</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="1506.5" x2="1674.5" y1="927.6201" y2="927.6201"/>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1513.5" y="939.6802"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="1525.5" y="947.6641">QTcpSocket m_socket</text>
+      <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1513.5" y="958.8003"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="1525.5" y="966.7842">QFile m_file</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="1506.5" x2="1674.5" y1="973.8604" y2="973.8604"/>
+      <ellipse cx="1516.5" cy="988.9204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1525.5" y="993.9043">open()</text>
+      <ellipse cx="1516.5" cy="1008.0405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="1525.5" y="1013.0244">close()</text>
+      <ellipse cx="1516.5" cy="1027.1606" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="1525.5" y="1032.1445">sendFile(QString path)</text>
+      <ellipse cx="1516.5" cy="1046.2808" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="1525.5" y="1051.2646">recvFile(QString path)</text>
+    </g>
+    <!--class Setting-->
+    <g id="elem_Setting">
+      <rect codeLine="166" fill="#F1F1F1" height="124.4805" id="Setting" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="115" x="62" y="365.1201"/>
+      <ellipse cx="94.55" cy="381.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M93.9719,386.9795 Q91.9406,386.9795 90.7531,385.4795 Q89.5813,383.9795 89.5813,380.8701 Q89.5813,378.2295 90.8313,376.4639 Q92.0813,374.6826 94.2375,374.6826 Q94.7531,374.6826 95.2844,374.8232 Q95.7219,375.0107 95.9719,375.0107 Q96.1594,375.0107 96.2531,374.9795 Q96.3469,374.9326 96.8938,374.2139 L97.7063,378.1826 L96.6594,378.4951 Q96.2063,376.9951 95.6125,376.417 Q95.0344,375.8232 94.1125,375.8232 Q92.9406,375.8232 92.2375,377.2295 Q91.5344,378.6201 91.5344,380.792 Q91.5344,383.1826 92.1281,384.4482 Q92.7375,385.6982 94.05,385.6982 Q94.9719,385.6982 95.6438,385.0264 Q96.3156,384.3389 96.6438,382.7607 L97.6906,383.2607 Q97.2844,385.0264 96.3,386.0107 Q95.3156,386.9795 93.9719,386.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="112.45" y="387.604">Setting</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="63" x2="176" y1="397.1201" y2="397.1201"/>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="63" x2="176" y1="405.1201" y2="405.1201"/>
+      <ellipse cx="73" cy="420.1802" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="82" y="425.1641">static load(...)</text>
+      <ellipse cx="73" cy="439.3003" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="82" y="444.2842">static save(...)</text>
+      <ellipse cx="73" cy="458.4204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="82" y="463.4043">static get(...)</text>
+      <ellipse cx="73" cy="477.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="82" y="482.5244">static set(...)</text>
+    </g>
+    <!--class Toolkit-->
+    <g id="elem_Toolkit">
+      <rect codeLine="173" fill="#F1F1F1" height="124.4805" id="Toolkit" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="215" x="212" y="365.1201"/>
+      <ellipse cx="294.25" cy="381.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M293.6719,386.9795 Q291.6406,386.9795 290.4531,385.4795 Q289.2813,383.9795 289.2813,380.8701 Q289.2813,378.2295 290.5313,376.4639 Q291.7813,374.6826 293.9375,374.6826 Q294.4531,374.6826 294.9844,374.8232 Q295.4219,375.0107 295.6719,375.0107 Q295.8594,375.0107 295.9531,374.9795 Q296.0469,374.9326 296.5938,374.2139 L297.4063,378.1826 L296.3594,378.4951 Q295.9063,376.9951 295.3125,376.417 Q294.7344,375.8232 293.8125,375.8232 Q292.6406,375.8232 291.9375,377.2295 Q291.2344,378.6201 291.2344,380.792 Q291.2344,383.1826 291.8281,384.4482 Q292.4375,385.6982 293.75,385.6982 Q294.6719,385.6982 295.3438,385.0264 Q296.0156,384.3389 296.3438,382.7607 L297.3906,383.2607 Q296.9844,385.0264 296,386.0107 Q295.0156,386.9795 293.6719,386.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="314.75" y="387.604">Toolkit</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="213" x2="426" y1="397.1201" y2="397.1201"/>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="213" x2="426" y1="405.1201" y2="405.1201"/>
+      <ellipse cx="223" cy="420.1802" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="189" x="232" y="425.1641">static initNetworkInterfaces(...)</text>
+      <ellipse cx="223" cy="439.3003" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="232" y="444.2842">static popIPAddr(...)</text>
+      <ellipse cx="223" cy="458.4204" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="232" y="463.4043">static pushIPAddr(...)</text>
+      <ellipse cx="223" cy="477.5405" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="232" y="482.5244">static resetPushBox(...)</text>
+    </g>
+    <!--class Logger-->
+    <g id="elem_Logger">
+      <rect codeLine="180" fill="#F1F1F1" height="86.2402" id="Logger" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="111" x="462" y="384.1201"/>
+      <ellipse cx="492.3" cy="400.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M491.7219,405.9795 Q489.6906,405.9795 488.5031,404.4795 Q487.3313,402.9795 487.3313,399.8701 Q487.3313,397.2295 488.5813,395.4639 Q489.8313,393.6826 491.9875,393.6826 Q492.5031,393.6826 493.0344,393.8232 Q493.4719,394.0107 493.7219,394.0107 Q493.9094,394.0107 494.0031,393.9795 Q494.0969,393.9326 494.6438,393.2139 L495.4563,397.1826 L494.4094,397.4951 Q493.9563,395.9951 493.3625,395.417 Q492.7844,394.8232 491.8625,394.8232 Q490.6906,394.8232 489.9875,396.2295 Q489.2844,397.6201 489.2844,399.792 Q489.2844,402.1826 489.8781,403.4482 Q490.4875,404.6982 491.8,404.6982 Q492.7219,404.6982 493.3938,404.0264 Q494.0656,403.3389 494.3938,401.7607 L495.4406,402.2607 Q495.0344,404.0264 494.05,405.0107 Q493.0656,405.9795 491.7219,405.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="509.7" y="406.604">Logger</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="463" x2="572" y1="416.1201" y2="416.1201"/>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="463" x2="572" y1="424.1201" y2="424.1201"/>
+      <ellipse cx="473" cy="439.1802" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="482" y="444.1641">initLogger(...)</text>
+      <ellipse cx="473" cy="458.3003" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="482" y="463.2842">output(...)</text>
+    </g>
+    <!--class QDialog-->
+    <g id="elem_QDialog">
+      <rect fill="#F1F1F1" height="48" id="QDialog" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="83" x="910" y="152.1201"/>
+      <ellipse cx="925" cy="168.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M924.4219,173.9795 Q922.3906,173.9795 921.2031,172.4795 Q920.0313,170.9795 920.0313,167.8701 Q920.0313,165.2295 921.2813,163.4639 Q922.5313,161.6826 924.6875,161.6826 Q925.2031,161.6826 925.7344,161.8232 Q926.1719,162.0107 926.4219,162.0107 Q926.6094,162.0107 926.7031,161.9795 Q926.7969,161.9326 927.3438,161.2139 L928.1563,165.1826 L927.1094,165.4951 Q926.6563,163.9951 926.0625,163.417 Q925.4844,162.8232 924.5625,162.8232 Q923.3906,162.8232 922.6875,164.2295 Q921.9844,165.6201 921.9844,167.792 Q921.9844,170.1826 922.5781,171.4482 Q923.1875,172.6982 924.5,172.6982 Q925.4219,172.6982 926.0938,172.0264 Q926.7656,171.3389 927.0938,169.7607 L928.1406,170.2607 Q927.7344,172.0264 926.75,173.0107 Q925.7656,173.9795 924.4219,173.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="939" y="174.604">QDialog</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="911" x2="992" y1="184.1201" y2="184.1201"/>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="911" x2="992" y1="192.1201" y2="192.1201"/>
+    </g>
+    <!--class QMainWindow-->
+    <g id="elem_QMainWindow">
+      <rect fill="#F1F1F1" height="48" id="QMainWindow" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="608.5" y="403.1201"/>
+      <ellipse cx="623.5" cy="419.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M622.9219,424.9795 Q620.8906,424.9795 619.7031,423.4795 Q618.5313,421.9795 618.5313,418.8701 Q618.5313,416.2295 619.7813,414.4639 Q621.0313,412.6826 623.1875,412.6826 Q623.7031,412.6826 624.2344,412.8232 Q624.6719,413.0107 624.9219,413.0107 Q625.1094,413.0107 625.2031,412.9795 Q625.2969,412.9326 625.8438,412.2139 L626.6563,416.1826 L625.6094,416.4951 Q625.1563,414.9951 624.5625,414.417 Q623.9844,413.8232 623.0625,413.8232 Q621.8906,413.8232 621.1875,415.2295 Q620.4844,416.6201 620.4844,418.792 Q620.4844,421.1826 621.0781,422.4482 Q621.6875,423.6982 623,423.6982 Q623.9219,423.6982 624.5938,423.0264 Q625.2656,422.3389 625.5938,420.7607 L626.6406,421.2607 Q626.2344,423.0264 625.25,424.0107 Q624.2656,424.9795 622.9219,424.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="637.5" y="425.604">QMainWindow</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="609.5" x2="729.5" y1="435.1201" y2="435.1201"/>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="609.5" x2="729.5" y1="443.1201" y2="443.1201"/>
+    </g>
+    <!--class QTranslator-->
+    <g id="elem_QTranslator">
+      <rect fill="#F1F1F1" height="48" id="QTranslator" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108" x="765.5" y="403.1201"/>
+      <ellipse cx="780.5" cy="419.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M779.9219,424.9795 Q777.8906,424.9795 776.7031,423.4795 Q775.5313,421.9795 775.5313,418.8701 Q775.5313,416.2295 776.7813,414.4639 Q778.0313,412.6826 780.1875,412.6826 Q780.7031,412.6826 781.2344,412.8232 Q781.6719,413.0107 781.9219,413.0107 Q782.1094,413.0107 782.2031,412.9795 Q782.2969,412.9326 782.8438,412.2139 L783.6563,416.1826 L782.6094,416.4951 Q782.1563,414.9951 781.5625,414.417 Q780.9844,413.8232 780.0625,413.8232 Q778.8906,413.8232 778.1875,415.2295 Q777.4844,416.6201 777.4844,418.792 Q777.4844,421.1826 778.0781,422.4482 Q778.6875,423.6982 780,423.6982 Q780.9219,423.6982 781.5938,423.0264 Q782.2656,422.3389 782.5938,420.7607 L783.6406,421.2607 Q783.2344,423.0264 782.25,424.0107 Q781.2656,424.9795 779.9219,424.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="794.5" y="425.604">QTranslator</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="766.5" x2="872.5" y1="435.1201" y2="435.1201"/>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="766.5" x2="872.5" y1="443.1201" y2="443.1201"/>
+    </g>
+    <!--class QTabWidget-->
+    <g id="elem_QTabWidget">
+      <rect fill="#F1F1F1" height="48" id="QTabWidget" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="112" x="908.5" y="403.1201"/>
+      <ellipse cx="923.5" cy="419.1201" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M922.9219,424.9795 Q920.8906,424.9795 919.7031,423.4795 Q918.5313,421.9795 918.5313,418.8701 Q918.5313,416.2295 919.7813,414.4639 Q921.0313,412.6826 923.1875,412.6826 Q923.7031,412.6826 924.2344,412.8232 Q924.6719,413.0107 924.9219,413.0107 Q925.1094,413.0107 925.2031,412.9795 Q925.2969,412.9326 925.8438,412.2139 L926.6563,416.1826 L925.6094,416.4951 Q925.1563,414.9951 924.5625,414.417 Q923.9844,413.8232 923.0625,413.8232 Q921.8906,413.8232 921.1875,415.2295 Q920.4844,416.6201 920.4844,418.792 Q920.4844,421.1826 921.0781,422.4482 Q921.6875,423.6982 923,423.6982 Q923.9219,423.6982 924.5938,423.0264 Q925.2656,422.3389 925.5938,420.7607 L926.6406,421.2607 Q926.2344,423.0264 925.25,424.0107 Q924.2656,424.9795 922.9219,424.9795 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="937.5" y="425.604">QTabWidget</text>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="909.5" x2="1019.5" y1="435.1201" y2="435.1201"/>
+      <line style="stroke:#181818;stroke-width:0.5;" x1="909.5" x2="1019.5" y1="443.1201" y2="443.1201"/>
+    </g>
+    <!--link ServerForm to BaseForm-->
+    <g id="link_ServerForm_BaseForm">
+      <path codeLine="186" d="M607.03,596.0901 C659.9,565.9201 725.33,534.4001 789,519.1201 C909.58,490.1801 1231.48,474.0601 1347,519.1201 C1365.57,526.3601 1368.7898,526.1787 1385.2598,538.2687 " fill="none" id="ServerForm-to-BaseForm" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="1399.77,548.9201,1388.8102,533.4319,1381.7093,543.1054,1399.77,548.9201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link ClientForm to BaseForm-->
+    <g id="link_ClientForm_BaseForm">
+      <path codeLine="187" d="M938.87,548.7901 C950.79,536.9001 964.18,526.5201 979,519.1201 C1052.17,482.6101 1270.81,489.4001 1347,519.1201 C1365.57,526.3601 1368.7898,526.1787 1385.2598,538.2687 " fill="none" id="ClientForm-to-BaseForm" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="1399.77,548.9201,1388.8102,533.4319,1381.7093,543.1054,1399.77,548.9201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link TransferForm to BaseForm-->
+    <g id="link_TransferForm_BaseForm">
+      <path codeLine="188" d="M1121.61,567.8401 C1138.17,548.1701 1158.04,530.2201 1181,519.1201 C1247.42,487.0101 1278.27,492.3101 1347,519.1201 C1365.57,526.3601 1368.7898,526.1787 1385.2598,538.2687 " fill="none" id="TransferForm-to-BaseForm" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="1399.77,548.9201,1388.8102,533.4319,1381.7093,543.1054,1399.77,548.9201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link NotepadForm to BaseForm-->
+    <g id="link_NotepadForm_BaseForm">
+      <path codeLine="189" d="M1347.76,668.6201 C1359.45,668.6201 1353.14,668.6201 1364.83,668.6201 " fill="none" id="NotepadForm-to-BaseForm" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="1382.83,668.6201,1364.83,662.6201,1364.83,674.6201,1382.83,668.6201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link HelpForm to QDialog-->
+    <g id="link_HelpForm_QDialog">
+      <path codeLine="190" d="M875.13,176.1201 C886.66,176.1201 880.2,176.1201 891.73,176.1201 " fill="none" id="HelpForm-to-QDialog" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="909.73,176.1201,891.73,170.1201,891.73,182.1201,909.73,176.1201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link ClientSktTcp to ClientSkt-->
+    <g id="link_ClientSktTcp_ClientSkt">
+      <path codeLine="192" d="M920.08,876.6201 C937.74,853.1701 959.74,831.2301 986,818.1201 C1053.2,784.5601 1084.92,791.0901 1155,818.1201 C1173.99,825.4401 1177.5202,825.4636 1194.5302,837.5336 " fill="none" id="ClientSktTcp-to-ClientSkt" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="1209.21,847.9501,1198.0024,832.6403,1191.058,842.4269,1209.21,847.9501" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link ClientSktUdp to ClientSkt-->
+    <g id="link_ClientSktUdp_ClientSkt">
+      <path codeLine="193" d="M1155.05,977.1201 C1166.82,977.1201 1160.58,977.1201 1172.35,977.1201 " fill="none" id="ClientSktUdp-to-ClientSkt" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="1190.35,977.1201,1172.35,971.1201,1172.35,983.1201,1190.35,977.1201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link ServerSktTcp to ServerSkt-->
+    <g id="link_ServerSktTcp_ServerSkt">
+      <path codeLine="194" d="M195.53,866.8101 C215.12,847.0301 237.83,829.2001 263,818.1201 C331.74,787.8501 361.92,791.0901 432,818.1201 C455.78,827.2901 464.1525,830.2724 484.6825,846.3024 " fill="none" id="ServerSktTcp-to-ServerSkt" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="498.87,857.3801,488.3751,841.5733,480.99,851.0316,498.87,857.3801" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link ServerSktUdp to ServerSkt-->
+    <g id="link_ServerSktUdp_ServerSkt">
+      <path codeLine="195" d="M432.05,977.1201 C443.82,977.1201 437.58,977.1201 449.35,977.1201 " fill="none" id="ServerSktUdp-to-ServerSkt" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="467.35,977.1201,449.35,971.1201,449.35,983.1201,467.35,977.1201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link Sokit to QMainWindow-->
+    <g id="link_Sokit_QMainWindow">
+      <path codeLine="198" d="M636.1155,316.7467 C647.6155,354.3967 655.46,380.1301 662.47,403.1001 " fill="none" id="Sokit-backto-QMainWindow" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="632.61,305.2701,630.5372,312.1769,636.1155,316.7467,638.1883,309.8399,632.61,305.2701" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link Sokit to QTranslator-->
+    <g id="link_Sokit_QTranslator">
+      <path codeLine="199" d="M707.2851,302.4857 C744.7351,343.7457 775.19,377.3101 798.24,402.7001 " fill="none" id="Sokit-backto-QTranslator" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="699.22,293.6001,700.2907,300.7313,707.2851,302.4857,706.2144,295.3546,699.22,293.6001" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link Sokit to QTabWidget-->
+    <g id="link_Sokit_QTabWidget">
+      <path codeLine="200" d="M708.7771,300.2801 C714.4371,304.5901 710.66,301.3901 716.5,305.1201 C785.43,349.1701 819.14,325.1301 890.5,365.1201 C908.8,375.3701 927.01,390.3101 940.79,402.8401 " fill="none" id="Sokit-backto-QTabWidget" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="699.23,293.0101,701.5802,299.8275,708.7771,300.2801,706.4269,293.4627,699.23,293.0101" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link Sokit to Setting-->
+    <g id="link_Sokit_Setting">
+      <path codeLine="201" d="M487.79,218.6201 C405.2,252.9901 288.97,305.6901 194.5,365.1201 C188.68,368.7801 187.629,369.2927 181.859,373.5227 " fill="none" id="Sokit-to-Setting" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+      <polygon fill="#181818" points="177.02,377.0701,186.6434,374.9749,181.0525,374.1139,181.9135,368.523,177.02,377.0701" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link Sokit to Toolkit-->
+    <g id="link_Sokit_Toolkit">
+      <path codeLine="202" d="M487.96,273.0301 C454.04,303.8601 421.8407,333.1252 391.4207,360.7652 " fill="none" id="Sokit-to-Toolkit" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+      <polygon fill="#181818" points="386.98,364.8001,396.331,361.7083,390.6806,361.4377,390.9511,355.7873,386.98,364.8001" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--link Sokit to Logger-->
+    <g id="link_Sokit_Logger">
+      <path codeLine="203" d="M554.39,305.2701 C545.69,333.7501 538.8328,356.2318 532.1128,378.2318 " fill="none" id="Sokit-to-Logger" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+      <polygon fill="#181818" points="530.36,383.9701,536.8147,376.5312,531.8207,379.1882,529.1637,374.1942,530.36,383.9701" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link QTabWidget to ServerForm-->
+    <g id="link_QTabWidget_ServerForm">
+      <path codeLine="205" d="M930.7496,459.2982 C916.9496,471.4982 908.03,478.2101 890.5,489.1201 C840.83,520.0501 705.76,579.2601 607.37,620.9901 " fill="none" id="QTabWidget-backto-ServerForm" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="939.74,451.3501,932.5954,452.3273,930.7496,459.2982,937.8941,458.321,939.74,451.3501" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link QTabWidget to ClientForm-->
+    <g id="link_QTabWidget_ClientForm">
+      <path codeLine="206" d="M950.3773,462.6271 C940.9173,485.7571 930.24,511.8501 915.07,548.9301 " fill="none" id="QTabWidget-backto-ClientForm" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="954.92,451.5201,948.9464,455.5594,950.3773,462.6271,956.351,458.5878,954.92,451.5201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link QTabWidget to TransferForm-->
+    <g id="link_QTabWidget_TransferForm">
+      <path codeLine="207" d="M978.6241,462.6265 C989.7241,489.7565 1004.2,525.1501 1021.77,568.0801 " fill="none" id="QTabWidget-backto-TransferForm" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="974.08,451.5201,972.6499,458.588,978.6241,462.6265,980.0542,455.5586,974.08,451.5201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link QTabWidget to NotepadForm-->
+    <g id="link_QTabWidget_NotepadForm">
+      <path codeLine="208" d="M1022.1765,456.7466 C1064.3665,478.6866 1116.1,508.7401 1163.5,549.1201 C1176.77,560.4301 1189.77,573.5601 1201.78,586.8801 " fill="none" id="QTabWidget-backto-NotepadForm" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="1011.53,451.2101,1015.0077,457.5272,1022.1765,456.7466,1018.6987,450.4295,1011.53,451.2101" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link ServerForm to ServerSktTcp-->
+    <g id="link_ServerForm_ServerSktTcp">
+      <path codeLine="210" d="M374.1062,750.2187 C329.7762,781.0287 288.94,811.3301 245.5,848.1201 C238.43,854.1101 231.28,860.4201 224.18,866.9001 " fill="none" id="ServerForm-backto-ServerSktTcp" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="383.96,743.3701,376.7503,743.5098,374.1062,750.2187,381.3159,750.079,383.96,743.3701" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link ServerForm to ServerSktUdp-->
+    <g id="link_ServerForm_ServerSktUdp">
+      <path codeLine="211" d="M433.0609,798.9257 C415.7309,834.8057 402.33,862.5701 386.49,895.3701 " fill="none" id="ServerForm-backto-ServerSktUdp" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="438.28,788.1201,432.0686,791.7832,433.0609,798.9257,439.2723,795.2626,438.28,788.1201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link ClientForm to ClientSktTcp-->
+    <g id="link_ClientForm_ClientSktTcp">
+      <path codeLine="212" d="M866.5,800.1201 C866.5,829.2601 866.5,848.1801 866.5,876.3401 " fill="none" id="ClientForm-backto-ClientSktTcp" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="866.5,788.1201,862.5,794.1201,866.5,800.1201,870.5,794.1201,866.5,788.1201" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link ClientForm to ClientSktUdp-->
+    <g id="link_ClientForm_ClientSktUdp">
+      <path codeLine="213" d="M950.2687,795.4799 C970.1287,825.3199 984.68,847.1801 1003.95,876.1301 " fill="none" id="ClientForm-backto-ClientSktUdp" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="943.62,785.4901,943.6144,792.7012,950.2687,795.4799,950.2743,788.2688,943.62,785.4901" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link TransferForm to TransferSkt-->
+    <g id="link_TransferForm_TransferSkt">
+      <path codeLine="214" d="M1146.5731,777.2052 C1154.7431,784.2952 1154.37,782.8401 1163.5,788.1201 C1290.3,861.4001 1361.75,773.0601 1487.5,848.1201 C1507.46,860.0401 1525.15,877.3401 1539.99,895.3901 " fill="none" id="TransferForm-backto-TransferSkt" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="1137.51,769.3401,1139.4199,776.2937,1146.5731,777.2052,1144.6633,770.2516,1137.51,769.3401" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--SRC=[nLTFQnj75B_lfnWef8fa2zf23g4Ox3Z6XjH4bKsEPhGpaWUjPZOpivADqnvA3EcfBSsj9PSGacl88L3HzjDiz3Kw_tPsPjTsqwBIYxtpUs_UlZ-_zzvA4fbX8DYKIB1Q_lpXnTFobpyICIKqXnpE08TqYWW7Hpj9yYaeVtk-Ulwcl7nL_l0oIJCe11YQgnS909jWy1Kaz16XY2t0x6H1aKMFb16HGScuGgK-ABndRtO8bU0Mv9Dq0wIda8DkLntcjut6jrR57aQCPO1G8eyF739d105noXRXESsOm270g6Hv26WRjKjDoPxIRsAxU0oBJ6wdaZ0g3k5Cl-0RdP3Z0r2-_SwbOWSAlCVup6NZcDozww7kxAGW1dx09XEiCv6P1vkY1qJ8BmT3oGcTR2bPoYZLM1ovyUkJ-gmjDx5z9gVuN3ZOXt2FqJ6PXAY0Stm5YYdgE4S0WX9k07yYF52SaYoh5BMd85D_J5OSBp2VOnwammB3gJnASys3D8_XOwJX0kK-UO49bxrUCvPUCunUd9XUAoUzjkUthEjQfa1Tb8v9fv2GE_plqkB3lfSHJ6KGjWLQONku7NPWOfrXQqhXLDgaEWmHSHLieWs2CjqoZgfPGIg2eAbj097wEaCm1QciUupb0UHzFcGIvn0r-Z54VKSEZl2Pl8_K6EjYzPVnZ_H6-Rz7ichOi1nJT_HExECiRtZW8PyOV8RJgaPkU9dPilhzfzNortgyUCfKqtQV2RcD4CTAE3iXba6F2pLHFxkZW9nnQHKTKsSdc7CNNPuLaqvaWUGR_hA-QZqggD6iU27lQmk-4vGzA-4uPHnzZTDvvx4oySNdO7GkiGY5Gqsgjh3LMOwPnIplw8NG1QDYh3op5pDCDzoi4zgWiw5tW8zIJ5hzwDhFvKqz3bawnPgvmZpu0ZRgOCfZ8hRFK9nJHTb83Ra3nOjTvNxOGeCT5USsv_0SZ0YzoYlT_SuhzVW_U-L7yJe8faoZZoEOqVpl2BOk9aNxAs2IWNNDp4EupZtFkcQbcvgBcuggYdLT7SDw_wkQheLf_-JDuOQugV4KhiUcWiRgtqsUwFUP2LiLA8Vor3DWVeN8pD7o_QloyltgxTAdH4gjSb7j54bIa368Elr-_tO8wWdV0YTOjXKhh8vUCQlwCFPgUeSSOhbWV7f09UPZc6BHCfQp_E2XRfgsf12druXKXs7vKCbts5d35VV1UU7Nc0Lg4woGUL47e3RFylM7x_yiBz-jtYsJu2jiyycM_yXDWi-K28-sVoG9bsyay3jHeuDT0jMdSP94erjBF914ypCMHMsgHHv8ebw8HIRef-MFpwgWpQyQjXdzfWdH-WT4XCBH8u8KGnpOxszLT0iGnuq0iHL9ajg0iLUdlYcfaz-KXEbloe82965TwtVPl5qhKuaBwrvxukvT9zFt8bw4dkhy_mK0]-->
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+@startuml
+title Sokit main.cpp 执行流程图
+
+start
+:程序入口 main(argc, argv);
+
+:创建 Sokit 应用对象;
+
+:调用 initUI();
+
+fork
+  :initTranslator();
+fork again
+  :initFont();
+fork again
+  :创建 HelpForm;
+  :绑定快捷键 F1/F10;
+fork again
+  :创建 ServerForm;
+  :创建 TransferForm;
+  :创建 ClientForm;
+  :创建 NotepadForm;
+  :加入 QTabWidget 标签页;
+end fork
+
+if (初始化成功?) then (是)
+  :调用 show() 显示主窗口;
+else (否)
+  :调用 close() 关闭窗口;
+endif
+
+:进入事件循环 a.exec();
+
+stop
+@enduml

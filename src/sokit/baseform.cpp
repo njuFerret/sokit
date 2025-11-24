@@ -51,13 +51,21 @@ void BaseForm::initLogger(QCheckBox *w, QToolButton *c, QTreeWidget *o, QPlainTe
 
   sl->setProperty(PROP_TARG, QVariant::fromValue(static_cast<void *>(d)));
 
-  connect(wr, SIGNAL(activated()), w, SLOT(click()));
-  connect(sl, SIGNAL(activated()), this, SLOT(hotOutput()));
-  connect(cl, SIGNAL(activated()), this, SLOT(clear()));
+  // connect(wr, SIGNAL(activated()), w, SLOT(click()));
+  // connect(sl, SIGNAL(activated()), this, SLOT(hotOutput()));
+  // connect(cl, SIGNAL(activated()), this, SLOT(clear()));
 
-  connect(this, SIGNAL(output(const QString &)), &m_logger, SLOT(output(const QString &)));
-  connect(this, SIGNAL(output(const QString &, const char *, quint32)), &m_logger,
-          SLOT(output(const QString &, const char *, quint32)));
+  // connect(this, SIGNAL(output(const QString &)), &m_logger, SLOT(output(const QString &)));
+  // connect(this, SIGNAL(output(const QString &, const char *, quint32)), &m_logger,
+  //         SLOT(output(const QString &, const char *, quint32)));
+
+  connect(wr, &QShortcut::activated, w, &QCheckBox::click);
+  connect(sl, &QShortcut::activated, this, &BaseForm::hotOutput);
+  connect(cl, &QShortcut::activated, this, &BaseForm::clear);
+
+  connect(this, qOverload<const QString &>(&BaseForm::output), &m_logger, qOverload<const QString &>(&Logger::output));
+  connect(this, qOverload<const QString &, const char *, quint32>(&BaseForm::output), &m_logger,
+          qOverload<const QString &, const char *, quint32>(&Logger::output));
 }
 
 void BaseForm::initLister(QToolButton *a, QToolButton *k, QListWidget *l) {
@@ -71,6 +79,12 @@ void BaseForm::initLister(QToolButton *a, QToolButton *k, QListWidget *l) {
 
   connect(k, SIGNAL(released()), this, SLOT(kill()));
   connect(a, SIGNAL(released()), m_cnlist, SLOT(selectAll()));
+
+  // connect(sk, &QShortcut::activated, this, qOverload<>(&BaseForm::kill));
+  // connect(sa, &QShortcut::activated, m_cnlist, &QListWidget::selectAll);
+
+  // connect(k, &QToolButton::released, this, qOverload<>(&BaseForm::kill));
+  // connect(a, &QToolButton::released, m_cnlist, &QListWidget::selectAll);
 
   bindFocus(m_cnlist, Qt::Key_F2);
 }
